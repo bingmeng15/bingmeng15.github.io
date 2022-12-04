@@ -2,6 +2,33 @@ document.addEventListener('DOMContentLoaded', function () {
   let blogNameWidth, menusWidth, searchWidth, $nav
   let mobileSidebarOpen = false
 
+  const adjustMenu = (init) => {
+    if (init) {
+      blogNameWidth = document.getElementById('site-name').offsetWidth
+      const $menusEle = document.querySelectorAll('#menus .menus_item')
+      menusWidth = 0
+      $menusEle.length && $menusEle.forEach(i => { menusWidth += i.offsetWidth })
+      const $searchEle = document.querySelector('#search-button')
+      searchWidth = $searchEle ? $searchEle.offsetWidth : 0
+      $nav = document.getElementById('nav')
+    }
+
+    let hideMenuIndex = ''
+    if (window.innerWidth <= 768) hideMenuIndex = true
+    else hideMenuIndex = blogNameWidth + menusWidth + searchWidth > $nav.offsetWidth - 120
+
+    if (hideMenuIndex) {
+      $nav.classList.add('hide-menu')
+    } else {
+      $nav.classList.remove('hide-menu')
+    }
+  }
+
+  // 初始化header
+  const initAdjust = () => {
+    adjustMenu(true)
+    $nav.classList.add('show')
+  }
 
   // sidebar menus
   const sidebarFn = {
@@ -250,11 +277,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const isChatBtnHide = typeof chatBtnHide === 'function'
     const isChatBtnShow = typeof chatBtnShow === 'function'
 
-    window.scrollCollect = () => {
-      return btf.throttle(function (e) {
+    const scrollTask = btf.throttle(() => {
         const currentTop = window.scrollY || document.documentElement.scrollTop
         const isDown = scrollDirection(currentTop)
         if (currentTop > 56) {
+          $header.classList.add('is-top-bar')
           if (isDown) {
             if ($header.classList.contains('nav-visible')) $header.classList.remove('nav-visible')
             if (isChatBtnShow && isChatShow === true) {
@@ -274,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         } else {
           if (currentTop === 0) {
-            $header.classList.remove('nav-fixed', 'nav-visible')
+            $header.classList.remove('is-top-bar')
           }
           $rightside.style.cssText = "opacity: ''; transform: ''"
         }
@@ -282,8 +309,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (document.body.scrollHeight <= innerHeight) {
           $rightside.style.cssText = 'opacity: 0.8; transform: translateX(-58px)'
         }
-      }, 200)()
-    }
+      }, 200)
+    
+    window.scrollCollect = scrollTask
 
     window.addEventListener('scroll', scrollCollect)
   }
@@ -450,7 +478,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // handle some cases
       typeof utterancesTheme === 'function' && utterancesTheme()
       typeof changeGiscusTheme === 'function' && changeGiscusTheme()
-      typeof FB === 'object' && window.loadFBComment()
+      typeof FB === 'object' && window.loadFBComment && window.loadFBComment()
       typeof runMermaid === 'function' && window.runMermaid()
     },
     showOrHideBtn: (e) => { // rightside 點擊設置 按鈕 展開
@@ -704,6 +732,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const unRefreshFn = function () {
     window.addEventListener('resize', () => {
+      adjustMenu(false)
       btf.isHidden(document.getElementById('toggle-menu')) && mobileSidebarOpen && sidebarFn.close()
     })
 
@@ -715,6 +744,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.refreshFn = function () {
+    initAdjust()
 
     if (GLOBAL_CONFIG_SITE.isPost) {
       GLOBAL_CONFIG.noticeOutdate !== undefined && addPostOutdateNotice()

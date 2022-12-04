@@ -1,10 +1,7 @@
 ---
 title: Hello World
-categories: butterfly
-tags: 
-    - hexo
-    - butterfly
-cover: https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+cover: 'https://s2.loli.net/2022/08/17/dMmQKLInBGH9VZu.jpg'
+abbrlink: 3eeb
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

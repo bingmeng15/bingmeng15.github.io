@@ -1,0 +1,328 @@
+/* 请根据需要修改 */
+
+/* 顶部调节 */
+#nav {
+    transition: 0.3s;
+    background: rgba(254, 254, 254, .7);
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+#nav a {
+    border-radius: 8px;
+    color: #4c4948;
+}
+#nav a:hover {
+    background: #5CA1FF;
+    transition: 0.3s;
+}
+#sidebar #sidebar-menus .menus_items .site-page:hover {
+    color: white;
+    border-radius: 0 0 5px #5CA1FF;
+}
+#nav .menus_items .menus_item .menus_item_child li:hover a {
+    color: white !important;
+}
+#nav .menus_items .menus_item .menus_item_child li {
+    font-weight: 700;
+    margin: 5px;
+    border-radius: 5px !important;
+    transition: all 0.3s;
+}
+div#menus {
+    display: flex;
+    align-items: center;
+}
+#page-header #nav .nav-button a {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav .site-page {
+    padding-bottom: 0px;
+}
+#nav *::after {
+    background-color: transparent !important;
+}
+
+/* 百分比显示 */
+#nav-totop {
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+#nav-totop:hover .totopbtn i {
+    opacity: 1;
+}
+#nav-totop #percent {
+    font-size: 10px;
+    background: white;
+    color: #5CA1FF;
+    width: 25px;
+    height: 25px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    font-weight: 700;
+}
+.nav-fixed #nav-totop #percent,
+.page #nav-totop #percent {
+    background: #4c4948;
+    color: white;
+    font-size: 13px;
+}
+#page-header:not(.is-top-bar) #percent {
+    transition: 0.3s;
+}
+#page-header:not(.is-top-bar) #nav-totop {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s, opacity 0.2s;
+    margin-left: 0 !important;
+}
+#nav-totop:hover #percent {
+    opacity: 0;
+    transform: scale(1.5);
+    font-weight: 700;
+}
+
+#page-header #nav #nav-right div {
+    margin-left: 0.5rem;
+    padding: 0;
+}
+
+/* 按钮调节 */
+#nav #search-button {
+    font-size: 1.5em;
+}
+#nav #darkmode_navswitch {
+    font-size: 1.3em;
+}
+.nav-button {
+    cursor: pointer;
+}
+#nav-totop .totopbtn i {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+
+/* 网站名称返回按钮 */
+#site-name,
+.shuoshuo {
+    white-space: nowrap;
+    overflow: hidden;
+}
+#site-name {
+    padding: 5px 8px;
+    position: relative;
+}
+#site-name *:not(i):hover {
+    display: none !important;
+}
+#blog_name #site-name:hover::after {
+    opacity: 1;
+    transform: scale(1.01);
+}
+#blog_name #site-name::after {
+    opacity: 0;
+    background-color: #5CA1FF !important;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    content: '\f015';
+    box-shadow: 0 0 5px #5CA1FF;
+    font-family: 'Font Awesome 6 Free';
+    text-align: center;
+    color: white;
+}
+#site-name i {
+    position: absolute;
+    top: 50%;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    left: 0;
+    opacity: 0;
+}
+#site-name:hover i {
+    opacity: 1;
+}
+
+/* 子菜单横向 */
+#nav .menus_items .menus_item .menus_item_child li {
+    display: inline-block;
+}
+#nav .menus_items .menus_item:hover .menus_item_child {
+    box-sizing: content-box;
+    display: block;
+    transform: translateX(-50%);
+    right: auto;
+    left: auto !important;
+}
+
+/* 子菜单空隙 */
+#nav .menus_items .menus_item .menus_item_child {
+    top: 65px;
+}
+
+/* 圆角隐藏 */
+ul.menus_item_child {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* 一级菜单居中 */
+#nav .menus_items {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#menus>div.menus_items>div>a {
+    letter-spacing: 0.3rem;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    padding: 0em 0.3em 0em 0.5em;
+}
+#nav .menus_items .menus_item {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+#nav .menus_items .menus_item>a>i:last-child {
+    display: none;
+}
+
+.page #nav a:hover {
+    color: white !important;
+    background: #5CA1FF;
+    transition: 0.3s;
+    box-shadow: 0px 0px 5px #5CA1FF;
+}
+#page-header #nav a:hover,
+#page-header.nav-fixed #nav a:hover,
+#page-header.nav-fixed #nav #site-name:hover,
+#page-header.nav-fixed #nav #toggle-menu:hover {
+    color: white;
+}
+
+/* 显示标题回到顶部 */
+#page-name::before {
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    color: white !important;
+    top: 6px;
+    left: 0;
+    content: '回到顶部';
+    background-color: #5CA1FF;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    opacity: 0;
+    box-shadow: 0 0 3px #5CA1FF;
+}
+#page-name:hover:before {
+    opacity: 1;
+}
+#page-name {
+    position: relative;
+    padding: 10px 30px;
+}
+
+/* 容器布局 */
+#name-container {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    bottom: 60px;
+}
+#name-container:hover {
+    transform: translateX(-50%) scale(1.03);
+}
+center#name-container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+}
+
+/* 固定样式 */
+.nav-fixed #nav {
+    transform: translateY(58px) !important;
+    -webkit-transform: translateY(58px) !important;
+    -moz-transform: translateY(58px) !important;
+    -ms-transform: translateY(58px) !important;
+    -o-transform: translateY(58px) !important;
+}
+.nav-fixed.nav-visible #name-container {
+    top: 60px;
+    transition: 0.3s;
+}
+.nav-fixed #name-container {
+    top: 15%;
+    transition: 0.3s;
+}
+.nav-fixed.nav-visible #menus .menus_items {
+    bottom: -10px;
+    transition: 0.3s;
+}
+.nav-fixed #menus .menus_items {
+    bottom: 60px;
+    transition: 0.3s;
+}
+
+.mask-name-container {
+    width: 1200px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .mask-name-container {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .mask-name-container {
+        display: none;
+    }
+}

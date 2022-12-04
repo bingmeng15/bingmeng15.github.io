@@ -1,0 +1,345 @@
+- class_name: 冰梦の收藏
+  class_desc: 大佬聚集地
+  link_list:
+    - name: Akilar
+      link: https://akilar.top
+      avatar: https://npm.elemecdn.com/akilar-candyassets/image/siteicon/favicon.png
+      descr: 欢迎光临糖果屋
+      siteshot: https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg
+      # siteshot就是站点缩略图的链接。
+
+    - name: guole's Blog
+      link: https://guole.fun/
+      avatar: https://guole.fun/img/gl.jpg
+      descr: 保持理智，相信明天。
+
+
+
+- class_name: 参考文献 👋👋
+  class_desc: 天下快意之事莫若友，快友之事莫若谈。
+  link_list:
+    - name: realyao
+      link: https://realyao.me/
+      avatar: https://cdn.guole.fun/logo/realyao.png
+      descr: 其个人 Blog 吸引我接触前端
+    - name: g1eny0ung
+      link: https://g1eny0ung.site/
+      avatar: https://cdn.guole.fun/logo/g1eny0ung.jpg
+      descr: 本站 Hugo 版主题作者
+    - name: iMaeGoo
+      link: https://www.imaegoo.com/
+      avatar: https://cdn.guole.fun/logo/虹墨.jpg
+      descr: Twikoo 功能作者
+    - name: 黑石博客
+      link: https://www.heson10.com/
+      avatar: https://cdn.guole.fun/logo/黑石.png
+      descr: BBtalk 功能作者
+    - name: 木木木木木
+      link: https://immmmm.com/
+      avatar: https://cdn.guole.fun/logo/木木木.jpg
+      descr: Bber 功能作者
+    - name: 小康博客
+      link: https://www.antmoe.com/
+      avatar: https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/avatar.jpg
+      descr: 一个收藏回忆与分享技术的地方！
+    - name: Sianx's Blog
+      link: https://sianx.com/
+      avatar: https://cdn1.tianli0.top/npm/picture-sianx@1.0.0/Blog/logo.png
+      descr: 总之岁月漫长，然而值得等待。
+    - name: Amnesia
+      link: https://amnesia-f.github.io/
+      avatar: https://npm.arcitcgn.cn/aciano-cdn@1.0.10/avatar.jpg
+      descr: 零碎的岛屿总会找到海.
+    - name: LYXの小破站
+      link: https://yisous.xyz/
+      avatar: https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/img/a.webp
+      descr: 
+    - name: GuoDong の Blog
+      link: https://guodongblog.com/
+      avatar: https://guodongblog.com/img/avatar.png
+      descr: 保持敬畏，保持谦卑~
+    - name: Sakura
+      link: https://www.hanz.vip/
+      avatar: https://cdn.guole.fun/logo/sakura.jpg
+      descr: 朋友，PHP 开发，唱歌贼好听
+    - name: 大西瓜
+      link: http://bikabi.cn/
+      avatar: https://cdn.guole.fun/logo/大西瓜.png
+      descr: 朋友，前端开发，羽毛球贼厉害
+    - name: 小康博客
+      link: https://www.antmoe.com/
+      avatar: https://cdn1.tianli0.top/npm/kang-static@latest/avatar.jpg
+      descr: 一个收藏回忆与分享技术的地方！
+    - name: CAYZLH
+      link: https://www.cayzlh.com/
+      avatar: https://fastly.jsdelivr.net/gh/cayzlh/psychic-potato@master/image/shark.jpg
+      descr: CODE IS POETRY
+    - name: Guo Le
+      link: https://guole.fun/
+      avatar: https://guole.fun/img/gl.jpg
+      descr:
+    - name: Ordis'Blog
+      link: https://imbhj.com/
+      avatar: https://imbhj.com/img/avatar1.png
+      descr:
+    - name: ITlubber
+      link: https://itlubber.gitee.io/
+      avatar: https://itlubber.gitee.io/img/avatar.jpg
+      descr: 苟且当下，心向远方，守一座城，等一个人
+    - name: 皮皮凛の小窝
+      link: https://owomoe.net/
+      avatar: https://owomoe.net/logo.webp
+      descr: 皮皮凛的个人博客
+    - name: 无境
+      link: https://drflower.top/
+      avatar: https://blog-1300673521.cos.ap-guangzhou.myqcloud.com/images/avatar.jpg
+      descr: 梦想成为家里蹲的游戏开发萌新
+    - name: 杏梢の小窝
+      link: https://hacamer.ml/
+      avatar: https://hacamer.ml/img/hacamer.jpg
+      descr:
+    - name: 无妄当自持
+      link: https://www.insidentally.com/
+      avatar: https://www.insidentally.com/images/icon/avatar.svg
+      descr:
+    - name: Eulaの小破站
+      link: https://www.eula.club/
+      avatar: https://www.eula.club/images/avatar.webp
+      descr: 去追寻便好，哪怕是须臾的光亮。
+    - name: 贰猹の小窝
+      link: https://noionion.top/
+      avatar:
+      descr:
+    - name: ChenQi
+      link: https://www.allbs.cn/
+      avatar:
+      descr: 辄思事理,翼尽刍荛
+    - name: Teacher Du
+      link: https://dusays.com/
+      avatar: https://cdn.dusays.com/avatar.png/2
+      descr: 师者，传道，授业，解惑
+    - name: 唐志远の博客
+      link: https://tzy1997.com/articles/hexo1602/
+      avatar: https://bu.dusays.com/2022/05/02/626f92e193879.jpg
+      descr: 2022年的理想开始实现了吗？
+    - name: CHAO
+      link: https://xcrayon.github.io/
+      avatar: https://xcrayon.github.io/images/avatar.jpeg
+      descr: 2022年的理想开始实现了吗？
+    - name: 梦家博客
+      link: https://dreamhomes.top/
+      avatar: https://cdn.jsdelivr.net/gh/dreamhomes/dreamhomes.github.io@master/img/avatar.gif
+      descr: 算法工程师｜机器学习
+    - name: NX の 博客
+      link: https://www.nickxu.top/
+      avatar: https://www.nickxu.top/static/favicon.jpg
+      descr: 折腾就是快乐
+    - name: 🌈MA-WEI-JIAN
+      link: https://weijian-m.github.io/
+      avatar: 
+      descr: 你看到那颗星星了嘛 ⭐
+    - name: 音乃木坂 COFFEE HOUSE
+      link: https://www.antjun.com/
+      avatar: 
+      descr: 
+    - name: 棃星落月
+      link: https://btmuli.github.io/
+      avatar: https://btmuli.github.io/img/avatar.jpg
+      descr: 愿愚薄望，如樱盛开，花吹雪散，佳人自来
+
+- class_name: 推荐网站 ✌✌
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网页框架
+    - name: Hugo
+      link: https://gohugo.io/
+      avatar: https://cdn.guole.fun/logo/hugo.png
+      descr: Go 语言的静态网站生成器
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-github-avatar.png
+      descr: 本站主题，真好看
+    - name: Lovelt
+      link: https://gohugo.io/
+      avatar: https://cdn.guole.fun/logo/lovelt.png
+      descr: Hugo主题，曾借鉴过一些样式，感谢
+    - name: 阿里图标库
+      link: https://www.iconfont.cn/
+      avatar: https://cdn.guole.fun/logo/weizhi.png
+      descr: 多次使用，感谢
+    - name: 8K壁纸库
+      link: https://wallhaven.cc/
+      avatar: https://cdn.guole.fun/logo/weizhi.png
+      descr: 本站背景从这里来，感谢
+    - name: Butterfly美化教程
+      link: https://butterfly.zhheo.com/
+      avatar: https://cdn.guole.fun/logo/weizhi.png
+      descr: 让每个人轻松的自定义自己的博客
+    - name: MQ's Blog
+      link: https://blog.mqawa.com/
+      avatar: https://res.mqawa.cn/blog-res/images/background/mqawa.jpg
+      descr: 人之所以能，是相信能。
+    - name: HCLonely Blog
+      link: https://blog.hclonely.com/
+      avatar: https://cdn.jsdelivr.net/gh/HCLonely/blog.hclonely.com@1.2.2/img/avatar.jpg
+      descr: 懒人一个
+    - name: HCY ACG!
+      link: https://www.hcyacg.com/
+      avatar: https://www.hcyacg.com/1.jpg
+      descr: 中国の学生です，よろしくお願いいたします。
+    - name: QianChengGit の小森林
+      link: https://qianchenggit.github.io/
+      avatar: https://qianchenggit.github.io/img/avatar.png
+      descr: Go Big Or Go Home!
+    - name: QianChengGit の小森林
+      link: https://qianchenggit.github.io/
+      avatar: https://qianchenggit.github.io/img/avatar.png
+      descr: Go Big Or Go Home!
+    - name: 花猪のBlog
+      link: https://cnhuazhu.top/
+      avatar: https://gcore.jsdelivr.net/gh/CNhuazhu/Image/avatar.jpg
+      descr: 
+    - name: yyyz
+      link: https://www.cnblogs.com/yyyzyyyz/?t=1661431558769
+      avatar: https://files.cnblogs.com/files/yyyzyyyz/%E5%A4%B4%E5%83%8F.bmp
+      descr:
+    - name: GamerNoTitle
+      link: https://bili33.top/
+      avatar: https://cdn.bilicdn.tk/gh/Vikutorika/assets@master/img/AboutMe/logo-mini.png
+      descr: 是大学生，也是个人开发者，在CTF领域学习中
+    - name: MoYu-zc
+      link: https://www.cnblogs.com/MoYu-zc/p/14395965.html
+      avatar: https://gitee.com/MoYu-zc/picgo/raw/master/img/20210213094450.jpg
+      descr:
+    - name: 是藏不是藏
+      link: https://zang.gold/
+      avatar: https://img.zang.gold/images/20210805201202-blogavatar.jpg
+      descr:
+
+
+- class_name: 那些大佬分享的技术
+  class_desc: 大佬不分前后，学习亦然
+
+# https://image.wnag.com.cn/2020/03/14/3a5095eb0560e.jpg 404加载图
+
+  link_list:
+    - name: 海客GO
+      link: https://www.hack-gov.com.cn/
+      avatar: https://cdn.jsdelivr.net/npm/akilar-candyassets/404.gif
+      descr: 当历史只剩罪恶，唯有推倒重来， 当娱乐至死成为主流，任人宰割的历史将会重演。
+      siteshot: 
+
+    - name: 小冰博客
+      link: https://zfe.space/
+      avatar: https://zfe.space/images/headimage.png
+      descr: 做个有梦想的人！
+      siteshot: 
+
+    - name: ishlong
+      link: https://l7g1024.com
+      avatar: ../images/avatar.jpg
+      descr: 欢迎交流与分享经验!
+      siteshot: 
+
+    - name: iami233
+      link: https://5ime.cn/
+      avatar: https://cdn.jsdelivr.net/gh/5ime/img/avatar.jpg
+      descr: 
+      siteshot: 
+
+    - name: Lete乐特
+      link: https://www.lete114.top/
+      avatar: ../images/avatar1.png
+      descr: 我相信我可以，但我一直在路上，所以我有无限的可能！！
+              人生只有一次，大胆的生活，怎么舒服怎么来！！
+      siteshot: 
+
+    - name: 小康博客
+      link: https://www.antmoe.com/
+      avatar: https://cdn.jsdelivr.net/npm/kang-static@latest/avatar.jpg
+      descr: 一个收藏回忆与分享技术的地方！
+      siteshot: 
+
+    - name: 恶魔萝莉控
+      link: https://nocilol.me/
+      avatar: https://cdn.jsdelivr.net/npm/akilar-candyassets/404.gif
+      descr: 
+      siteshot: 
+    
+    - name: 张洪Heo
+      link: https://blog.zhheo.com/
+      avatar: https://blog.zhheo.com/img/avatar.png
+      descr: 荆棘之路，劈风斩浪
+      siteshot: 
+
+    - name: 昕某人の秘密基地
+      link: https://www.maxin-blog.com/
+      avatar: https://blog-image-1300408325.cos.ap-beijing.myqcloud.com/%E5%A4%B4%E5%83%8F.jpg
+      descr: 我将化作虚空，只愿掸去一身尘土
+      siteshot: 
+
+    - name: 卓越科技的Blog
+      link: https://blog.zykjofficial.top/
+      avatar: https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/avatar.png
+      descr: Remarkable life,for science and technology.
+      siteshot: 
+
+    - name: 可定博客
+      link: https://wnag.com.cn/
+      avatar: https://image.wnag.com.cn/2020/02/18/8e34bd27ab66b.jpg
+      descr: 点进来的，都是各个方面的大佬~
+      siteshot: 
+
+    - name: Android|矩阵
+      link: https://android99.me/
+      avatar: https://android99.me/img/avatar.png
+      descr: HelloWorld!
+      siteshot: 
+    
+    - name: 小N博客
+      link: https://www.nesxc.com/
+      avatar: https://cdn-1.nesxc.com/img/avatar.gif
+      descr: 坐标南京，是一名电商运营。如果你有电商方面的经验，欢迎一起交流。
+      siteshot: 
+
+    - name:  VictorXu
+      link: https://blog.vanxnf.top/
+      avatar: https://blog.vanxnf.top/img/avatar.png
+      descr: 电子信息，硕士在读
+      siteshot: 
+
+    - name: 潘高的小站
+      link: https://blog.pangao.vip/
+      avatar: https://blog.pangao.vip/images/avatar.jpg
+      descr: IT套路深，必须瞎折腾
+      siteshot: ../images/home.jpg
+
+    - name: Jerry
+      link: https://immyw.com/
+      avatar: ../images/avatar.png
+      descr: 今日事,今日畢
+      siteshot: 
+
+    - name: So4ms的博客
+      link: https://so4ms.top/
+      avatar: https://so4ms.top/wp-content/uploads/2020/11/1602468269720.jpeg
+      descr: IT套路深，必须瞎折腾
+      siteshot: https://so4ms.top/index.php/wp-json/sakura/v1/image/cover
+
+    - name: Ethanyi's Blog
+      link: https://ethanyi9.gitee.io/
+      avatar: ../images/avatar.jpeg
+      descr: 
+      siteshot: https://cdn.jsdelivr.net/gh/thanyi/image/bkground.jpeg
+
+    - name: guole's Blog
+      link: https://guole.fun/
+      avatar: https://cdn.guole.fun/logo/guole.fun.png
+      descr: 本站 Hexo 版
+    - name: guole's Blog
+      link: https://blog.guole.fun/
+      avatar: https://cdn.guole.fun/logo/blog.guole.fun.png
+      descr: 本站 Hugo 版

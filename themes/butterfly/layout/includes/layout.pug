@@ -8,11 +8,14 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
   head
     include ./head.pug
   body
-    if theme.preloader
-      !=partial('includes/loading/loading', {}, {cache: true})
+    if theme.preloader.enable
+      !=partial('includes/loading/index', {}, {cache: true})
 
     if theme.background
-      #web_bg
+     if page.background
+       #web_bg(style=`background:`+ page.background + `;background-attachment: local;background-position: center;background-size: cover;background-repeat: no-repeat;`)
+     else
+        #web_bg
       
     !=partial('includes/sidebar', {}, {cache: true})
 
@@ -45,4 +48,6 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
 
     include ./rightside.pug
     !=partial('includes/third-party/search/index', {}, {cache: true})
+    include ./music.pug
+    !=partial('includes/rightmenu',{}, {cache:true})
     include ./additional-js.pug
