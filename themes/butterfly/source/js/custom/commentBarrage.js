@@ -12,9 +12,9 @@ const commentBarrageConfig = {
 	//弹幕显示间隔时间，单位ms
 	barrageTime: 3000,
 	//twikoo部署地址（Vercel、私有部署），腾讯云的为环境ID
-	twikooUrl: "https://twikoo.abeginner.top/",
+	twikooUrl: "https://twikoo.abeginner.top",
 	//token获取见前文
-	accessToken: "{18d5d7bf5d1b40abb13ef4db50227b9f}",
+	accessToken: "{8f8e196798774e4fbd220d3f610baf35}",
 	pageUrl: window.location.pathname,
 	barrageTimer: [],
 	barrageList: [],
@@ -27,7 +27,18 @@ const commentBarrageConfig = {
 	//头像cdn，默认cravatar
 	avatarCDN: "cravatar.cn",
 }
-
+function checkURL(URL) {
+	var str = URL;
+	//判断URL地址的正则表达式为:http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?
+	//下面的代码中应用了转义字符"\"输出一个字符"/"
+	var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+	var objExp = new RegExp(Expression);
+	if (objExp.test(str) == true) {
+		return true;
+	} else {
+		return false;
+	}
+} //判断url合法性
 function isInViewPortOfOne(el) {
 	const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 	const offsetTop = el.offsetTop
@@ -35,16 +46,17 @@ function isInViewPortOfOne(el) {
 	const top = offsetTop - scrollTop
 	return top <= viewPortHeight
 }
-document.onscroll = function () {
-	if (commentBarrageConfig.displayBarrage) {
-		if (isInViewPortOfOne(document.getElementById("post-comment"))) {
-			document.getElementsByClassName("comment-barrage")[0].setAttribute("style", `display:none;`)
-		}
-		else {
-			document.getElementsByClassName("comment-barrage")[0].setAttribute("style", "")
+if (location.href.indexOf("posts") != -1) //节流，优化非文章页面的弹幕显隐
+	document.onscroll = function () {
+		if (commentBarrageConfig.displayBarrage) {
+			if (isInViewPortOfOne(document.getElementById("post-comment"))) {
+				document.getElementsByClassName("comment-barrage")[0].setAttribute("style", `display:none;`)
+			}
+			else {
+				document.getElementsByClassName("comment-barrage")[0].setAttribute("style", "")
+			}
 		}
 	}
-}
 function initCommentBarrage() {
 	var data = JSON.stringify({
 		"event": "COMMENT_GET",
@@ -62,7 +74,8 @@ function initCommentBarrage() {
 	xhr.open("POST", commentBarrageConfig.twikooUrl);
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.send(data);
-	setInterval(() => {
+	timer = setInterval(() => {
+		console.log(commentBarrageConfig.barrageList);
 		if (commentBarrageConfig.barrageList.length) {
 			popCommentBarrage(commentBarrageConfig.barrageList[commentBarrageConfig.barrageIndex]);
 			commentBarrageConfig.barrageIndex += 1;
@@ -72,7 +85,7 @@ function initCommentBarrage() {
 			removeCommentBarrage(commentBarrageConfig.barrageTimer.shift())
 		}
 	}, commentBarrageConfig.barrageTime)
-
+	//扒评论
 }
 function commentLinkFilter(data) {
 	data.sort((a, b) => {
@@ -102,15 +115,57 @@ function popCommentBarrage(data) {
 	barrage.className = 'comment-barrage-item'
 	let ran = Math.floor(Math.random() * commentBarrageConfig.lightColors.length)
 	document.getElementById("barragesColor").innerHTML = `[data-theme='light'] .comment-barrage-item { background-color:${commentBarrageConfig.lightColors[ran][0]};color:${commentBarrageConfig.lightColors[ran][1]}}[data-theme='dark'] .comment-barrage-item{ background-color:${commentBarrageConfig.darkColors[ran][0]};color:${commentBarrageConfig.darkColors[ran][1]}}`;
-
-	barrage.innerHTML = `
-		<div class="barrageHead">
-			<img class="barrageAvatar" src="https://${commentBarrageConfig.avatarCDN}/avatar/${data.mailMd5}?d=${commentBarrageConfig.noAvatarType}"/>
-			<div class="barrageNick">${data.nick}</div>
-			<a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
-		</div>
-		<div class="barrageContent">${data.comment}</div>
-	`
+	if (data.avatar != undefined) {
+		if (data.link != undefined) {
+			if (!checkURL(data.link)) {
+				data.link = "http://" + data.link;
+			}//网址加协议头
+			//增加评论和网址跳转
+			barrage.innerHTML = `
+			<div class="barrageHead">
+				<img class="barrageAvatar" src="${data.avatar}"/>
+				<a href="${data.link}" class="barrageNick" target="_blank">${data.nick}</a>
+				<a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+			</div>
+			<a class="barrageContent" href="#${data.id}">${data.comment}</a>
+			`
+		}
+		else {
+			barrage.innerHTML = `
+			<div class="barrageHead">
+				<img class="barrageAvatar" src="${data.avatar}"/>
+				<div class="barrageNick">${data.nick}</div>
+				<a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+			</div>
+			<a class="barrageContent" href="#${data.id}">${data.comment}</a>
+			`
+		}
+	}
+	else {
+		if (data.link != undefined) { //QQ头像
+			if (!checkURL(data.link)) {
+				data.link = "http://" + data.link;
+			}
+			barrage.innerHTML = `
+			<div class="barrageHead">
+				<img class="barrageAvatar" src="https://${commentBarrageConfig.avatarCDN}/avatar/${data.mailMd5}?d=${commentBarrageConfig.noAvatarType}"/>
+				<a href="${data.link}" class="barrageNick" target="_blank">${data.nick}</a>
+				<a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+			</div>
+			<a class="barrageContent" href="#${data.id}">${data.comment}</a>
+			`
+		}
+		else {
+			barrage.innerHTML = `
+			<div class="barrageHead">
+				<img class="barrageAvatar" src="https://${commentBarrageConfig.avatarCDN}/avatar/${data.mailMd5}?d=${commentBarrageConfig.noAvatarType}"/>
+				<div class="barrageNick">${data.nick}</div>
+				<a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+			</div>
+			<a class="barrageContent" href="#${data.id}">${data.comment}</a>
+			`
+		}
+	}
 	commentBarrageConfig.barrageTimer.push(barrage);
 	commentBarrageConfig.dom.append(barrage);
 }
@@ -134,6 +189,7 @@ switchCommentBarrage = function () {
 			$(commentBarrage).fadeToggle()
 		}
 	}
+
 }
 $(".comment-barrage").hover(function () {
 	clearInterval(timer);
