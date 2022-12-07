@@ -80,13 +80,13 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 先查询自己的版本是支持的最高版本是多少，我们用命令**nvidia-smi**来查询你的电脑支持的最高版本！
 
-![](./img/WR8LM9~O]TQ5U2CUWIRXORX.png)
+![WR8LM9OTQ5U2CUWIRXORXa9acca722aeb8cbc.png](https://img.picgo.net/2022/12/07/WR8LM9OTQ5U2CUWIRXORXa9acca722aeb8cbc.png)
 
 {% tip %}这里由于我有安装`CUDA`，这里是不会显示什么的，你没有安装的话，这里会显示你电脑可以安装的版本，右上角显示的是你支持的最高的版本号，不要安装的太高，低于上面的版本就行（如我安装的是`11.6`版本，我电脑也支持`11.7`）。{% endtip %}
 
 然后我们进入`CUDA`的官网,下载对应的版本，也可以下载低一点的版本，不一定下载高版本，我感觉都差不多
 
-![](./img/JWG4S46NUSR9Y30BE`}S29T.png)
+[![JWG4S46NUSR9Y30BES29Tfafb623501dbe1fa.png](https://img.picgo.net/2022/12/07/JWG4S46NUSR9Y30BES29Tfafb623501dbe1fa.png)](https://www.picgo.net/image/UZrh4)
 
 对应自己的系统来下载，别下载其它系统的`CUDA`虽然不知道有什么bug，不过还是下载自己对应的系统比较好，因为我的是**windows 11**所以我下载的是**11**的版本
 
@@ -104,7 +104,7 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 **这里全部选择安装，不要想这么多。**
 
-![](./img/Q2S4CT23C_V75GF1OY9FBTB.png)
+[![Q2S4CT23C_V75GF1OY9FBTBd457c41f2e1015b5.png](https://img.picgo.net/2022/12/07/Q2S4CT23C_V75GF1OY9FBTBd457c41f2e1015b5.png)](https://www.picgo.net/image/UZIhO)
 
 {% note default simple %}后面的安装路径你可以自己改，不过我还是推荐用默认路径。{% endnote %}
 
@@ -120,11 +120,11 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 打上勾，选择存档的`cuDNN`版本
 
-![](./img/ORK7MY2$SC.png)
+[![ORK7MY2SC15ba1471b552167a.png](https://img.picgo.net/2022/12/07/ORK7MY2SC15ba1471b552167a.png)](https://www.picgo.net/image/UZjwL)
 
 找到自己对应的版本
 
-![](./img/98.png)
+[![989e4291ed91d96fdf.png](https://img.picgo.net/2022/12/07/989e4291ed91d96fdf.png)](https://www.picgo.net/image/UZeS2)
 
 {% note default simple %}
 没有找到自己对应的版本号，选择后面有`x`符号的（比如我的`11.6.55`，我安装的就是`cuDNN v8.5.0`版本）。
@@ -133,11 +133,11 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 把下面的安装包直接解压到路径下
 
-![](./img/XM%249LCHRV.png)
+![XM9LCHRV257cad544ed7fb40.png](https://img.picgo.net/2022/12/07/XM9LCHRV257cad544ed7fb40.png)
 
 找不到文件路径自己去高级变量那里看，安装的时候，它直接默认安装了环境变量
 
-![](./img/SQG7PRP9N.png)
+[![SQG7PRP9N3d72b5987f35e2ad.png](https://img.picgo.net/2022/12/07/SQG7PRP9N3d72b5987f35e2ad.png)](https://www.picgo.net/image/UZKar)
 
 **添加至系统变量**
 
@@ -145,25 +145,25 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 往系统环境变量中的 `Path` 添加如下路径（根据自己的路径进行修改）
 
-![](./img/UL4`W3DO_3BWCM53K1K.png)
+![UL4W3DO_3BWCM53K1K3b2f08970f8d1827.png](https://img.picgo.net/2022/12/07/UL4W3DO_3BWCM53K1K3b2f08970f8d1827.png)
 
 这里的是我的安装路径，你自己改过就自己改成自己自定义安装路径
 
-![](./img/59X3QZ0TDBX]0SW.png)
+[![Quicker_20221122_181115690dc0b7fdf87d40.md.png](https://img.picgo.net/2022/12/07/Quicker_20221122_181115690dc0b7fdf87d40.md.png)](https://www.picgo.net/image/UZvKJ)
 
 在这个路径下`cmd`点击`enter`回车，打开命令框
 
 如我的是`C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\extras\demo_suite`
 
-![](./img/4R~VAXUZRS1GVJ06Q5XG.png)
+[![4RVAXUZRS1GVJ06Q5XG1cde34697c47f673.md.png](https://img.picgo.net/2022/12/07/4RVAXUZRS1GVJ06Q5XG1cde34697c47f673.md.png)](https://www.picgo.net/image/UZ5Mf)
 
 执行`deviceQuery.exe`和`bandwidthTest.exe`两个exe文件
 
-![](./img/H3PZ3_XFK5P.png)
+[![H3PZ3_XFK5Pf634ce72793d76d4.md.png](https://img.picgo.net/2022/12/07/H3PZ3_XFK5Pf634ce72793d76d4.md.png)](https://www.picgo.net/image/UZR0i)
 
 下面你还看见了`deviceQuery`这些信息，可以通过信息看出来`11.6`是所支持的最高版本的CUDA，后面的`Runtime Version`是实际运行的时候使用的CUDA版本，最后面Device0是第一块显卡的意思，如果你有多个显卡就会显示Device1。
 
-![](./img/BF9NR1CVF_M9340_QBM.png)
+[![BF9NR1CVF_M9340_QBM045ad0ce76a50b4a.md.png](https://img.picgo.net/2022/12/07/BF9NR1CVF_M9340_QBM045ad0ce76a50b4a.md.png)](https://www.picgo.net/image/UZz8j)
 
 {% endfolding %}
 
@@ -175,11 +175,11 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
     下面显示我的模块需要更新，我以为是我的需要更新，`pip list`查询是已经更新了的，后面发现是`stable-diffusion-webui`文件夹里面的模块没有更新，这需要你定位到`stable-diffusion-webui-cn\venv\Scripts`下进行更新，显示这个有点烦，眼不见为净的可以去更新一下（听说是可以不用更新，不过我感觉还是更新了好，毕竟显示在那里碍眼，没有显示的不用管）
     
-    ![](./img/LJZ82YZNR7.png)
+    ![LJZ82YZNR71dbeb405eae3ddad.png](https://img.picgo.net/2022/12/07/LJZ82YZNR71dbeb405eae3ddad.png)
 
     如果显示这样的是因为你没有开启**魔法**，安装过程对网络要求较高，需要你自己去开启**魔法**。
 
-    ![](./img/WQRXK02HQDHTOU.png)
+    ![WQRXK02HQDHTOUdd79eeb5c7e04c11.png](https://img.picgo.net/2022/12/07/WQRXK02HQDHTOUdd79eeb5c7e04c11.png)
 
     这里再附上DeepDanbooru下载，这是针对二次元图片的tag属性识别算法。
     
@@ -201,7 +201,7 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 启动的时候你如果看见`Loading VAE weights from:XXXX`就表明你vae配置成功了（如下图）。
 
-![](./img/Quicker_20221122_181115.png)
+[![Quicker_20221122_181115690dc0b7fdf87d40.md.png](https://img.picgo.net/2022/12/07/Quicker_20221122_181115690dc0b7fdf87d40.md.png)](https://www.picgo.net/image/UZvKJ)
 
 ### 添加config
 
@@ -211,7 +211,7 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 去自己下载的模型文件下`novelaileak\stableckpt\modules\modules`里面的文件全部复制粘贴到`stable-diffusion-webui\models\hypernetworks`下（你在复制模型文件的时候有看见）。
 
-![](./img/IDQKDBW2GEGL1O9.png)
+![IDQKDBW2GEGL1O970577940129be56a.png](https://img.picgo.net/2022/12/07/IDQKDBW2GEGL1O970577940129be56a.png)
 
 这样你可以在`Settings-Stable Diffusion-Stable Diffusion finetune hypernetwork`选择你想要的`hypernetwork`模型。
 
