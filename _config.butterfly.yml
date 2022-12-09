@@ -915,9 +915,6 @@ inject:
     # 页脚振翅蝴蝶动效
     - <link rel="stylesheet" href="/css/custom/customization.css" media="defer" onload="this.media='all'">
   bottom:
-    # 评论弹窗
-    - <script defer src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
-    - <script defer src="/js/custom/commentBarrage.js"></script>
     # 阿里矢量图标
     - <script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script>
     # MAC黑色代码框样式
@@ -926,7 +923,9 @@ inject:
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macWhite.css">
     # 随机跳转一篇文章
     # - <script src="/custom/random.js"></script>
-
+    # 评论弹窗
+    - <script defer src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script defer src="/js/custom/commentBarrage.js"></script>
     # 和风天气
     # - <script async data-pjax src="/js/custom/nav.js"></script>
     - <script defer data-pjax src="https://widget.heweather.net/simple/static/js/he-simple.js?v=1.4.0"></script>

@@ -1,5 +1,5 @@
 ---
-title: hwox-butterfly主题美化记录
+title: hexo-butterfly主题美化记录
 abbrlink: 88bbc922
 date: 2022-08-26 13:58:28
 tags: "butterfly"
@@ -18,7 +18,6 @@ date: 2021-03-31 13:26:54
 background: url(https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/blog-construct/banner.jpg)
 swiper_index: 4
 ```
-
 
 
 

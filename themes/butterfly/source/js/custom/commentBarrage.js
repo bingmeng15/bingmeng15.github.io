@@ -55,7 +55,7 @@ function initCommentBarrage() {
 	xhr.addEventListener("readystatechange", function () {
 		if (this.readyState === 4) {
 			commentBarrageConfig.barrageList = commentLinkFilter(JSON.parse(this.responseText).data);
-			// commentBarrageConfig.dom.innerHTML = '';
+			commentBarrageConfig.dom.innerHTML = '';
 		}
 	});
 	xhr.open("POST", commentBarrageConfig.twikooUrl);
