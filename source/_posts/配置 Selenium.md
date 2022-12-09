@@ -3,7 +3,7 @@ title: 配置 Selenium
 tags: 软件测试
 cover: https://gcore.jsdelivr.net/npm/ushio-api-img-moe@5.0.31/img_313_1530x1000_72_null_normal.jpg #'https://tva4.sinaimg.cn/large/005FzdTdgy1gegf7mn8b5j31hc0u0dkw.jpg'
 abbrlink: '6770'
-categories: 学习
+categories: 学习笔记
 date: 2022-12-07 22:28:55
 ---
 

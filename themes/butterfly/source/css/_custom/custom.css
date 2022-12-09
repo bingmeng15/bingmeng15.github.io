@@ -71,22 +71,22 @@
 
 /* 一图流 */
 /* 头图透明 */
-#page-header {
+/* #page-header {
   background: transparent !important;
 }
 
 #page-header::before {
   opacity: 0;
-}
+} */
 
 /* footer透明 */
-#footer {
+/* #footer {
   background: transparent !important;
 }
 
 #footer::before {
   opacity: 0;
-}
+} */
 
 
 /* 代码框主题 */
@@ -463,7 +463,7 @@ body,html,.post-meta-date{
 
 
 /* 页脚颜色 */
-.copyright {
+/* .copyright {
   color: #ffffff;
 }
 
@@ -473,7 +473,7 @@ body,html,.post-meta-date{
 
 #footer #footer-wrap .framework-info a {
   color: #ffffff;
-}
+} */
 
 
 /* 悬浮伸缩侧边栏 */
@@ -1256,10 +1256,10 @@ div#post {
   background: rgba(255,255,255,0);
 }
 
-#aside-content > .card-widget:first-child {
+/* #aside-content > .card-widget:first-child {
   background: rgba(255,255,255,0.5);
   backdrop-filter: blur(10px);
-}
+} */
 
 #aside-content .card-widget {
   background: rgba(255,255,255,0.5);

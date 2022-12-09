@@ -1,7 +1,7 @@
 ---
 title: 基于 hexo 搭建个人博客（二）
 tags: 'hexo,butterfly'
-cover: 'https://www.xzccc.com/api/acg/'
+cover: 'https://gcore.jsdelivr.net/npm/ushio-api-img-moe@5.0.4/img_48_1920x1080_1200_null_normal.jpg'
 categories: hexo搭建教程
 swiper_index: 2
 abbrlink: 38690

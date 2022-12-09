@@ -3,7 +3,8 @@ title: hexo-butterfly主题美化记录
 abbrlink: 88bbc922
 date: 2022-08-26 13:58:28
 tags: "butterfly"
-categories: butterfly美化日记
+categories: butterfly美化
+cover: https://tva4.sinaimg.cn/large/005FzdTdgy1gegf7mn8b5j31hc0u0dkw.jpg
 ---
 
 

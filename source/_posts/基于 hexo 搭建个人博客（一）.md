@@ -5,7 +5,7 @@ tags:
 swiper_index: 1
 categories:
   - hexo搭建教程
-cover: 'https://btmuli.github.io/img/swd3e2/56635008_p0.jpg'
+cover: 'https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg3fvi4j31hc0u0h35.jpg'
 abbrlink: 1880
 date: 2022-07-06 17:57:00
 ---

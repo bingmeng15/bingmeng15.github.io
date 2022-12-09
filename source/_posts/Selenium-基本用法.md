@@ -1,9 +1,10 @@
 ---
 title: Selenium 基本用法
 tags: 软件测试
-categories: 学习
+categories: 学习笔记
 abbrlink: be1c
 date: 2022-12-09 00:46:31
+cover: https://tva3.sinaimg.cn/large/0075auPSly1fqb43hl7ubj31kw0uxav1.jpg
 ---
 
 ## 基本用法
@@ -662,7 +663,6 @@ time.sleep(2)
 # 在搜索框输入 python
 browser.find_element_by_xpath("//*[@id='kw']").send_keys('python')
 browser.find_element_by_xpath('//*[@id="su"]').click()
-browser.find_elements
 time.sleep(2)
 
 # 关闭浏览器

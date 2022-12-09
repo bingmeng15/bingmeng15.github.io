@@ -95,7 +95,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img:
+index_img: transparent
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
@@ -534,7 +534,7 @@ background:
   # 'linear-gradient(to right top, #009fff, #ec2f4b)'
 
 # Footer Background
-footer_bg: false
+footer_bg: transparent #transparent
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -923,9 +923,6 @@ inject:
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macWhite.css">
     # 随机跳转一篇文章
     # - <script src="/custom/random.js"></script>
-    # 评论弹窗
-    - <script defer src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
-    - <script defer src="/js/custom/commentBarrage.js"></script>
     # 和风天气
     # - <script async data-pjax src="/js/custom/nav.js"></script>
     - <script defer data-pjax src="https://widget.heweather.net/simple/static/js/he-simple.js?v=1.4.0"></script>
@@ -950,7 +947,7 @@ inject:
     # 樱花动效背景
     # - <script src="/js/custom/sakura.js"></script>
     # 雪花动态背景
-    - <script defer src="/js/custom/snow.js"></script> # 六边下雪动效
+    - <script defer data-pjax src="/js/custom/snow.js"></script> # 六边下雪动效
     # - <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
     # - <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
     # - <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
@@ -972,7 +969,7 @@ inject:
     - <script async src="/js/custom/diytitle.js"></script>
     # 导航栏
     - <script async src="/js/custom/nav_menu.js"></script>
-    # live2d
+    # live2d- <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jque
     - <script defer src="/live2d-widget/autoload.js"></script>
     # 切换背景
     - <script async src="/js/custom/handoff.js"></script>
@@ -982,9 +979,10 @@ inject:
     # 右键修改
     - <script src="/js/custom/rightmenu.js"></script>
     - <script src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
-    # - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
-
-
+    # - <script defer data-pjax type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    # 评论弹窗
+    - <script defer src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script defer src="/js/custom/commentBarrage.js"></script>
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改

@@ -1,7 +1,7 @@
 ---
 title: 基于 hexo 搭建个人博客（三）
 tags: 'hexo,butterfly'
-cover: 'https://btmuli.github.io/img/swd3e2/55974777_p0.jpg'
+cover: 'https://tva4.sinaimg.cn/large/0075auPSly1fqb9dyz4lwj31hc0tznds.jpg'
 categories: hexo搭建教程
 swiper_index: 3
 abbrlink: 39771
