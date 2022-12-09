@@ -16,7 +16,7 @@ cover: "https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/blog-construct/bann
 
 {% folding yellow, 我的一些碎碎念 %}
 
-配置`NovelAI`需要一个好的显卡，显存很重要，越大的就越好，显卡低的虽然也可以跑，不过爆的概太大了，还有最重要的性能，关系到你的出图的时间。
+配置`NovelAI`需要一个好的显卡，显存很重要，越大的就越好，显卡低的虽然也可以跑，不过爆的概率太大了，还有最重要的性能，关系到你的出图的时间。
 还需要安装好CUDA驱动，我在下面出一下CUDA安装的教程方法，一起吧，不需要翻来覆去的去找教程了
 
 {% endfolding %}
@@ -240,19 +240,4 @@ ip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
     webui-user.bat
     ```
 
-{% sitegroup %}
-{% site xaoxuu, url=https://xaoxuu.com, screenshot=https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg, avatar=https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png, description=简约风格 %}
-{% endsitegroup %}
-
-{% btns rounded grid5 %}
-{% cell 下载地址, https://www.python.org/downloads/windows/, fas fa-download %}
-{% cell 查看文档, /, fas fa-book-open %}
-{% endbtns %}
-
-{% tip %}default{% endtip %}
-
-{% folding yellow, 查看图片测试 %}
-
-![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
-
-{% endfolding %}
+基本上到这里就已经完成了，如果你的还没有部署成功，一般都是电脑配置太低或者你的显卡不是N卡，要么就是不会魔法。
