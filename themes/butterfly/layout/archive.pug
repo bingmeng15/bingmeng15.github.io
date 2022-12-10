@@ -5,5 +5,6 @@ block content
   #archive
     - const archiveLength = findArchiveLength(fragment_cache)
     .article-sort-title= _p('page.articles') + ' - ' + archiveLength
-    +articleSort(page.posts)
+    //- +articleSort(page.posts)
+    +articleSort(page.posts, page.current)
     include includes/pagination.pug

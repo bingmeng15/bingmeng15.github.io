@@ -10,5 +10,6 @@ block content
     include ./includes/mixins/article-sort.pug
     #tag
       .article-sort-title= _p('page.tag') + ' - ' + page.tag
-      +articleSort(page.posts)
+      //- +articleSort(page.posts)
+      +articleSort(page.posts, page.current)
       include includes/pagination.pug
