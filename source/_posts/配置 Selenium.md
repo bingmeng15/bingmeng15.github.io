@@ -20,7 +20,7 @@ pip install selenium==3.141.0
 
 {% note green no-icon %}你可以安装最新版，不过与旧版本区别很大，不过现在很多情况下`3.141.0`这个版本用的最多（个人认为）。{% endnote %}
 
-模块搜索官网：https://pypi.org/
+模块搜索官网：https://pypi.org
 <!-- endtab -->
 
 <!-- tab 浏览器驱动 -->
@@ -31,11 +31,11 @@ pip install selenium==3.141.0
 
 1. Google chrome
 
-{% link chromedriver驱动,https://registry.npmmirror.com/binary.html?path=chromedriver/,https://ts1.cn.mm.bing.net/th/id/R-C.ab97f6bcbc5d6fbceee27df50463ad06?rik=PDjQ3YxqLbhtPA&riu=http%3a%2f%2fgood1230.com%2f100sucai_images%2fimages%2f3678.jpg&ehk=A1CUjjT2KowDhRVxkYkT8nszeCsOGgt55PCHOAXKbx4%3d&risl=&pid=ImgRaw&r=0 %}
+{% link chromedriver驱动,https://registry.npmmirror.com/binary.html?path=chromedriver, https://ts1.cn.mm.bing.net/th/id/R-C.ab97f6bcbc5d6fbceee27df50463ad06?rik=PDjQ3YxqLbhtPA&riu=http%3a%2f%2fgood1230.com%2f100sucai_images%2fimages%2f3678.jpg&ehk=A1CUjjT2KowDhRVxkYkT8nszeCsOGgt55PCHOAXKbx4%3d&risl=&pid=ImgRaw&r=0 %}
 
 2. Firfox 浏览器
 
-{% link chromedriver驱动,https://registry.npmmirror.com/binary.html?path=geckodriver/,https://tse1-mm.cn.bing.net/th/id/OIP-C.IS9p4m5Nfz7jedxqDixrKQHaHp?pid=ImgDet&rs=1 %}
+{% link chromedriver驱动,https://registry.npmmirror.com/binary.html?path=geckodriver, https://tse1-mm.cn.bing.net/th/id/OIP-C.IS9p4m5Nfz7jedxqDixrKQHaHp?pid=ImgDet&rs=1 %}
 
 <!-- endtab -->
 

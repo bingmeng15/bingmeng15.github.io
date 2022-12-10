@@ -534,7 +534,7 @@ background:
   # 'linear-gradient(to right top, #009fff, #ec2f4b)'
 
 # Footer Background
-footer_bg: transparent #transparent
+footer_bg: false #transparent
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -715,7 +715,7 @@ aside:
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
   card_ip:
-    enable: false
+    enable: true
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -822,7 +822,7 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
@@ -903,9 +903,10 @@ inject:
     # - <link rel="stylesheet" href="/css/custom/title.css" media="defer" onload="this.media='all'">
     - <link rel="stylesheet" href="https://widget.heweather.net/simple/static/css/he-simple.css?v=1.4.0">
     # aplayer音乐
-    # - <link rel="stylesheet" href="/css/custom/aplayer.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom/aplayer.css" media="defer" onload="this.media='all'">
+    # - <link rel="stylesheet" href="/css/custom/aplayer1.css" media="defer" onload="this.media='all'">
     # twikoo评论块气泡风格
-    - <link rel="stylesheet" href="/css/custom/twikoo_beautify.css" media="defer" onload="this.media='all'">
+    # - <link rel="stylesheet" href="/css/custom/twikoo_beautify.css" media="defer" onload="this.media='all'">
     # 图标包
     - <link rel="stylesheet" href="/css/iconfont/iconfont.css" media="defer" onload="this.media='all'">
     # 一图流
@@ -914,7 +915,15 @@ inject:
     - <link rel="stylesheet" href="/css/custom/style.css?1" media="defer" onload="this.media='all'">
     # 页脚振翅蝴蝶动效
     - <link rel="stylesheet" href="/css/custom/customization.css" media="defer" onload="this.media='all'">
+    # fps显示
+    - <link rel="stylesheet" href="/css/custom/fps.css" media="defer" onload="this.media='all'">
+
+    - <link rel="stylesheet" href="/css/custom/custom1.css" media="defer" onload="this.media='all'">
   bottom:
+    # fps显示
+    - <div id="fps"></div>
+    # - <script src="/js/custom/forNarmal.js"></script>
+    # - <script defer src="/js/custom/forPjax.js"></script>
     # 阿里矢量图标
     - <script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script>
     # MAC黑色代码框样式
@@ -923,6 +932,11 @@ inject:
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macWhite.css">
     # 随机跳转一篇文章
     # - <script src="/custom/random.js"></script>
+    # 评论弹窗
+    - <script defer data-pjax src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script defer src="/js/custom/commentBarrage.js"></script>
+    # 侧栏评论区
+    - <script data-pjax defer src="/js/custom/fixed_comment.js"></script>
     # 和风天气
     # - <script async data-pjax src="/js/custom/nav.js"></script>
     - <script defer data-pjax src="https://widget.heweather.net/simple/static/js/he-simple.js?v=1.4.0"></script>
@@ -933,7 +947,8 @@ inject:
     - <script src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script>
     # 顶部加载进度条
     - <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-
+    # 浏览器异常提醒
+    - <script data-pjax src="/js/custom/abnormal.js"></script>
     # 上升气泡效果
     # - <script defer src="https://cdn.jsdelivr.net/combine/npm/jquery@latest/dist/jquery.min.js,gh/weilining/jsdelivr/jquery/circlemagic/circlemagic.min.js,gh/weilining/jsdelivr@latest/jquery/circlemagic/butterflycirclemagic.js"></script>
     # 水波荡漾效果 开启 pjax
@@ -945,16 +960,21 @@ inject:
     # - <script defer src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples/dist/jquery.ripples.js"></script>
     # - <script defer src="/js/ripples.js"></script>
     # 樱花动效背景
-    # - <script src="/js/custom/sakura.js"></script>
+    # - <script async src="/js/custom/sakura.js"></script>
     # 雪花动态背景
-    - <script defer data-pjax src="/js/custom/snow.js"></script> # 六边下雪动效
-    # - <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
-    # - <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
-    # - <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
-    # - <script src="/js/custom/snowflake.js"></script> #下雪动效
+    # - <script async src="/js/custom/snow.js"></script> # 六边下雪动效
+    - <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+    - <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+    - <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
+    - <script src="/js/custom/snowflake.js"></script> #下雪动效
     # aplayer音乐
-    - <div class="aplayer no-destroy" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
-    # - <div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div>
+    # - <div class="aplayer no-destroy" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
+    # - <div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist" data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div>
+    # - <script data-pjax src="/js/custom/aplayer1.js"></script>
+    # - <div id="nav-music" onclick="rootlex.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="1708664797" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random"></meting-js></div>
+    # aplayer修改
+    - <script async data-pjax src="/js/custom/aplayer.js"></script>
+    - <script async data-pjax src="/js/custom/anzhiyufunction.js"></script>
     # 夜间模式背景
     - <canvas id="universe"></canvas> # 创建画布
     - <script src="/js/custom/universe.js"></script> # 引入js
@@ -962,7 +982,7 @@ inject:
     - <script async data-pjax src="/js/custom/floatpanel.js"></script>
     # 底部时间
     - <script src="/js/custom/script.js?1"></script>
-    - <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    # - <script async data-pjax src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
     # 访客信息
     - <script data-pjax src="/js/custom/ip_content.js"></script>
     # 标题卖萌
@@ -973,16 +993,11 @@ inject:
     - <script defer src="/live2d-widget/autoload.js"></script>
     # 切换背景
     - <script async src="/js/custom/handoff.js"></script>
-    # aplayer修改
-    - <script async data-pjax src="/js/custom/aplayer.js"></script>
-    - <script async data-pjax src="/js/custom/anzhiyufunction.js"></script>
     # 右键修改
     - <script src="/js/custom/rightmenu.js"></script>
     - <script src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
     # - <script defer data-pjax type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
-    # 评论弹窗
-    - <script defer src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
-    - <script defer src="/js/custom/commentBarrage.js"></script>
+
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
@@ -1120,20 +1135,38 @@ wowjs:
 
 # hexo-butterfly-swiper
 # see https://akilar.top/posts/8e1264d1/
+# swiper:
+#   enable: true # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: all # 应用页面
+#   timemode: date #date/updated
+#   layout: # 挂载容器类型
+#     type: id
+#     name: recent-posts
+#     index: 0
+#   default_descr: 再怎么看我也不知道怎么描述它的啦！
+#   swiper_css: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css
+#   #https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
+#   swiper_js: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js
+#     #https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
+#   custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
+#   custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+
+# hexo-butterfly-swiper-lyx
+# see https://yisous.xyz/posts/670e47f/#%E6%9B%B4%E5%A5%BD%E7%9A%84%E9%A6%96%E9%A1%B5%E8%BD%AE%E6%92%AD
 swiper:
   enable: true # 开关
-  priority: 5 #过滤器优先权
+  priority: 5 # 过滤器优先权
   enable_page: all # 应用页面
-  timemode: date #date/updated
   layout: # 挂载容器类型
-    type: id
+    type: class
     name: recent-posts
     index: 0
-  default_descr: 再怎么看我也不知道怎么描述它的啦！
-  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
-  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+  default_descr:
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper-lyx/lib/swiperstyle.css
+  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper-lyx/lib/swiper_init.js
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
@@ -1150,3 +1183,4 @@ tag_plugins:
     iconfont: /js/custom/ali_font.js #参看https://akilar.top/
     carousel: https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
     tag_plugins_css: https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+

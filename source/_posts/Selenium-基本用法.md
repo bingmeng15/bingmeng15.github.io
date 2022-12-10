@@ -83,7 +83,7 @@ browser.close()
 
 ```python
 from selenium import webdriver
-import time  
+import time
 
 browser = webdriver.Firefox()
 

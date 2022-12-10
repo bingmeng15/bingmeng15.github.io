@@ -1,12 +1,27 @@
 /* 个人卡片渐变色 */
-#aside-content>.card-widget.card-info {
+/* #aside-content>.card-widget.card-info {
   background: linear-gradient(-45deg, #5CA1FF, #031764, #150136, #67044d);
   background-size: 400%;
   box-shadow: 0 0 1px black;
   animation: gradient 15s ease infinite;
   position: relative;
   color: white;
+} */
+
+/*白天主题下的配置*/
+#aside-content>.card-widget.card-info {
+  /*换成自己图片的地址*/
+  background-image: url('https://images.wallpaperscraft.com/image/single/silhouette_starry_sky_pillars_134464_168x300.jpg');
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: 100%
 }
+/*黑暗主题下的配置*/
+[data-theme=dark] #aside-content>.card-widget.card-info {
+  /*换成自己图片的地址*/
+  background-image: url('https://images.wallpaperscraft.com/image/single/girl_lights_grass_163914_168x300.jpg') !important
+}
+
 
 .site-data>a .headline,
 .site-data>a .length-num {

@@ -13,7 +13,7 @@ categories: NovelAI
 
 自从`NovelAI`模型泄露到现在，热度一直居高不下，基本上都有很多人在本地部署`NovelAI`，不过有很多人还是部署失败，我尝试了很多次，也踩了很多的`bug`，希望我的文章对你有所帮助。
 
-#### 注意事项，电脑配置不高的可跳过
+### 注意事项，电脑配置不高的可跳过
 
 {% folding yellow, 我的一些碎碎念 %}
 
@@ -36,7 +36,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ````
 
 {% btns rounded grid5 %}
-{% cell 下载地址, https://www.python.org/downloads/windows/, fas fa-download %}
+{% cell 下载地址, https://www.python.org/downloads/windows, fas fa-download %}
 {% endbtns %}
 <!-- endtab -->
 

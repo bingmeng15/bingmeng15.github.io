@@ -230,3 +230,6 @@ gitcalendar:
 encrypt:
     enable: true
 
+#双栏美化
+butterfly_article_double_row:
+  enable: false

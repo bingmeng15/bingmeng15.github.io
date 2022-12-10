@@ -1,8 +1,8 @@
 ---
-title: 基于 hexo 搭建个人博客（三）
+title: 搭建个人博客（三）
 tags: 'hexo,butterfly'
 cover: 'https://tva4.sinaimg.cn/large/0075auPSly1fqb9dyz4lwj31hc0tznds.jpg'
-categories: hexo搭建教程
+categories: hexo
 swiper_index: 3
 abbrlink: 39771
 date: 2022-07-09 14:01:53

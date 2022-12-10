@@ -1,6 +1,6 @@
 /* 字体样式 */
 @font-face {
-  font-family: 'ZhuZiAWan';
+  font-family:'ZhuZiAWan';
   /* 字体名自定义即可 */
   src: url('/fonts/ZhuZiAWan.ttf');
   /* 字体文件路径 */
