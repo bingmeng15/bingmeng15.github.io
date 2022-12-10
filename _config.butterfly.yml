@@ -922,7 +922,7 @@ inject:
   bottom:
     # fps显示
     - <div id="fps"></div>
-    # - <script src="/js/custom/forNarmal.js"></script>
+    - <script src="/js/custom/forNarmal.js"></script>
     # - <script defer src="/js/custom/forPjax.js"></script>
     # 阿里矢量图标
     - <script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script>
