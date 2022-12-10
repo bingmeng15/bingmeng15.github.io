@@ -687,6 +687,7 @@ aside:
   card_announcement:
     enable: true
     content: 欢迎来到我的博客！！！
+            - <div id="fps"></div>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -922,7 +923,7 @@ inject:
   bottom:
     # fps显示
     - <div id="fps"></div>
-    - <script src="/js/custom/forNarmal.js"></script>
+    - <script src="/js/custom/fps.js"></script>
     # - <script defer src="/js/custom/forPjax.js"></script>
     # 阿里矢量图标
     - <script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script>
