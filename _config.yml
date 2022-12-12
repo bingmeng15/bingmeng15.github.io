@@ -121,9 +121,9 @@ search:
   field: post
   content: true
 
-aplayer:
-  meting: true
-  asset_inject: false
+# aplayer:
+#   meting: true
+#   asset_inject: false
 
 # envelope_comment
 # see https://akilar.top/posts/e2d3c450/

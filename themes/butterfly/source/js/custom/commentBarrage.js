@@ -1,4 +1,14 @@
+//CommentBarrage 2.0 PJAXed By Ariasaka
+//因为C++的原因码风越来越奇怪了
 
+document.addEventListener('pjax:complete', startbarrage);
+document.addEventListener('DOMContentLoaded', startbarrage);
+
+function startbarrage(){
+try{
+clearInterval(timer);
+document.querySelector('.comment-barrage').innerHTML="";
+}catch(err){}
 const commentBarrageConfig = {
     //浅色模式和深色模式颜色，务必保持一致长度，前面是背景颜色，后面是字体，随机选择，默认这个颜色还好
     lightColors:[
@@ -14,8 +24,7 @@ const commentBarrageConfig = {
     //twikoo部署地址（Vercel、私有部署），腾讯云的为环境ID
     twikooUrl: "https://twikoo.abeginner.top",
     //token获取见前文
-    accessToken: "{c32c4eabed3742f2974dc62e835f3a4b}",
-
+    accessToken: "{04003de1b0d54d2d8213138aae49ae79}",
     pageUrl: window.location.pathname,
     barrageTimer: [],
     barrageList: [],
@@ -28,7 +37,18 @@ const commentBarrageConfig = {
     //头像cdn，默认cravatar
     avatarCDN: "cravatar.cn",
 }
-
+function checkURL(URL){
+    var str=URL;
+    //判断URL地址的正则表达式为:http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?
+    //下面的代码中应用了转义字符"\"输出一个字符"/"
+    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+    var objExp=new RegExp(Expression);
+    if(objExp.test(str)==true){
+    return true;
+    }else{
+    return false;
+    }
+    } 
 function isInViewPortOfOne (el) {
     const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight 
     const offsetTop = el.offsetTop
@@ -36,6 +56,7 @@ function isInViewPortOfOne (el) {
     const top = offsetTop - scrollTop
     return top <= viewPortHeight
 }
+if(location.href.indexOf("posts")!=-1||location.href.indexOf("posts")!=-1)
 document.onscroll = function() {
     if(commentBarrageConfig.displayBarrage){
     if(isInViewPortOfOne(document.getElementById("post-comment"))){
@@ -63,7 +84,7 @@ function initCommentBarrage(){
         xhr.open("POST", commentBarrageConfig.twikooUrl);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(data);
-        setInterval(()=>{
+        timer=setInterval(()=>{
             if(commentBarrageConfig.barrageList.length){
                 popCommentBarrage(commentBarrageConfig.barrageList[commentBarrageConfig.barrageIndex]);
                 commentBarrageConfig.barrageIndex += 1;
@@ -103,21 +124,62 @@ function popCommentBarrage(data){
     barrage.className = 'comment-barrage-item'
     let ran = Math.floor(Math.random()*commentBarrageConfig.lightColors.length)
     document.getElementById("barragesColor").innerHTML=`[data-theme='light'] .comment-barrage-item { background-color:${commentBarrageConfig.lightColors[ran][0]};color:${commentBarrageConfig.lightColors[ran][1]}}[data-theme='dark'] .comment-barrage-item{ background-color:${commentBarrageConfig.darkColors[ran][0]};color:${commentBarrageConfig.darkColors[ran][1]}}`;
-
-    barrage.innerHTML = `
-        <div class="barrageHead">
-            <img class="barrageAvatar" src="https://${commentBarrageConfig.avatarCDN}/avatar/${data.mailMd5}?d=${commentBarrageConfig.noAvatarType}"/>
-            <div class="barrageNick">${data.nick}</div>
-            <a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
-        </div>
-        <div class="barrageContent">${data.comment}</div>
-    `
+    if(data.avatar!=undefined){
+        if(data.link!=undefined){
+            if(!checkURL(data.link)){
+                data.link="http://"+data.link;
+            }
+            barrage.innerHTML = `
+            <div class="barrageHead">
+                <img class="barrageAvatar" src="${data.avatar}"/>
+                <a href="${data.link}" class="barrageNick" target="_blank">${data.nick}</a>
+                <a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+            </div>
+            <a class="barrageContent" href="#${data.id}">${data.comment}</a>
+            `
+        }
+        else{
+            barrage.innerHTML = `
+            <div class="barrageHead">
+                <img class="barrageAvatar" src="${data.avatar}"/>
+                <div class="barrageNick">${data.nick}</div>
+                <a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+            </div>
+            <a class="barrageContent" href="#${data.id}">${data.comment}</a>
+            `
+        }
+    }
+    else{
+        if(data.link!=undefined){
+            if(!checkURL(data.link)){
+                data.link="http://"+data.link;
+            }
+            barrage.innerHTML = `
+            <div class="barrageHead">
+                <img class="barrageAvatar" src="https://${commentBarrageConfig.avatarCDN}/avatar/${data.mailMd5}?d=${commentBarrageConfig.noAvatarType}"/>
+                <a href="${data.link}" class="barrageNick" target="_blank">${data.nick}</a>
+                <a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+            </div>
+            <a class="barrageContent" href="#${data.id}">${data.comment}</a>
+            `
+        }
+        else{
+            barrage.innerHTML = `
+            <div class="barrageHead">
+                <img class="barrageAvatar" src="https://${commentBarrageConfig.avatarCDN}/avatar/${data.mailMd5}?d=${commentBarrageConfig.noAvatarType}"/>
+                <div class="barrageNick">${data.nick}</div>
+                <a href="javascript:switchCommentBarrage()" style="font-size:20px">×</a>
+            </div>
+            <a class="barrageContent" href="#${data.id}">${data.comment}</a>
+            `
+        }
+    }
     commentBarrageConfig.barrageTimer.push(barrage);
     commentBarrageConfig.dom.append(barrage);
 }
 function removeCommentBarrage(barrage){
     barrage.className = 'comment-barrage-item out';
-
+    
     if(commentBarrageConfig.maxBarrage!=1){
         setTimeout(()=>{
             commentBarrageConfig.dom.removeChild(barrage);
@@ -135,6 +197,7 @@ switchCommentBarrage = function () {
         $(commentBarrage).fadeToggle()
     }
 }
+
 }
 $(".comment-barrage").hover(function(){
     clearInterval(timer);
@@ -157,3 +220,6 @@ if(localStorage.getItem("isBarrageToggle")==undefined){
     switchCommentBarrage()
 }
 initCommentBarrage()
+}
+
+

@@ -1,8 +1,8 @@
 //bbtalkLunboer v2.0 By Ariasaka
 AV.init({
-    appId: "{YOUR_APPID}",
-    appKey: "{YOUR_APPKEY}",
-    serverURL: "{YOUR_URL}", //改成自己的，在设置->域名绑定
+    appId: "{SzUPsOGc1AzqeMyEKB2PLaY9-gzGzoHsz}",
+    appKey: "{KytY2eiuxWHWRnlMy5wucqiH}",
+    serverURL: "{bm158.tk}", //改成自己的，在设置->域名绑定
 });
 function lunbo() {
     var speaks = [];

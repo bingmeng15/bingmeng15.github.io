@@ -1,18 +1,17 @@
-#fps {
+#fps{
     position: fixed;
-    right: 10px;
-    bottom: 4px;
+    right:10px;
+    bottom:4px;
     z-index: 1919810;
 }
 
-[data-theme="light"] #fps {
+[data-theme="light"] #fps{
     background-color: var(--lyx-white-acrylic1);
     padding: 4px;
     border-radius: 4px;
     backdrop-filter: blur(10px);
 }
-
-[data-theme="dark"] #fps {
+[data-theme="dark"] #fps{
     background-color: var(--lyx-black-acrylic1);
     padding: 4px;
     border-radius: 4px;

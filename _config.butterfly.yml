@@ -7,7 +7,7 @@ menu:
   目录||fas fa-file-text:
     时间轴: /archives/ || fas fa-archive
     标签: /tags/ || fas fa-tags
-    归档: /categories/ || fas fa-folder-open
+    分类: /categories/ || fas fa-folder-open
   娱乐||fas fa-list:
     blibli: /bangumis || fa-brands fa-bilibili #icon-bilibili1
     音乐: /music/ || fas fa-music
@@ -24,7 +24,7 @@ highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: false # unit: px
+highlight_height_limit: 150 # unit: px
 code_word_wrap: false
 
 # copy settings
@@ -144,7 +144,8 @@ error_404:
   subtitle: "页面没有找到"
   background: https://s2.loli.net/2022/08/17/dMmQKLInBGH9VZu.jpg
   custom_text:
-    - <div id="runtime"></div>
+    # - <div id="runtime"></div>
+    
 
 post_meta:
   page: # Home Page
@@ -163,7 +164,7 @@ post_meta:
 # wordcount (字數統計)
 # see https://butterfly.js.org/posts/ceeb73f/#字數統計
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -408,8 +409,8 @@ tidio:
 # daovoice
 # http://daovoice.io/
 daovoice:
-  enable: false
-  app_id:
+  enable: true
+  app_id: da04ca09
 
 # gitter
 # https://gitter.im/
@@ -893,18 +894,19 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # 公共css
-    # - <link rel="stylesheet" href="https://cdn.cbd.int/qweather-icons@1.1.1/font/qweather-icons.css">
-    # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
-    # 评论弹窗
-    - <style id="barragesColor"></style>
-    - <link rel="stylesheet" href="/css/custom/commentBarrage.css" media="defer" onload="this.media='all'">
     # 导航栏
     # - <link rel="stylesheet" href="/css/custom/title.css" media="defer" onload="this.media='all'">
     - <link rel="stylesheet" href="https://widget.heweather.net/simple/static/css/he-simple.css?v=1.4.0">
+    # 公共css
+    # - <link rel="stylesheet" href="https://cdn.cbd.int/qweather-icons@1.1.1/font/qweather-icons.css">
+    # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    # 自定义
+    - <link rel="stylesheet" href="/css/custom/custom.css" media="defer" onload="this.media='all'">
+    # 评论弹窗
+    - <style id="barragesColor"></style>
+    - <link rel="stylesheet" href="/css/custom/commentBarrage.css" media="defer" onload="this.media='all'">
     # aplayer音乐
-    - <link rel="stylesheet" href="/css/custom/aplayer.css" media="defer" onload="this.media='all'">
-    # - <link rel="stylesheet" href="/css/custom/aplayer1.css" media="defer" onload="this.media='all'">
+    # - <link rel="stylesheet" href="/css/custom/aplayer.css" media="defer" onload="this.media='all'">
     # twikoo评论块气泡风格
     # - <link rel="stylesheet" href="/css/custom/twikoo_beautify.css" media="defer" onload="this.media='all'">
     # 图标包
@@ -913,30 +915,22 @@ inject:
     - <link rel="stylesheet" href="/css/modify.css" media="defer" onload="this.media='all'">
     # 底部时间
     - <link rel="stylesheet" href="/css/custom/style.css?1" media="defer" onload="this.media='all'">
-    # 页脚振翅蝴蝶动效
-    # - <link rel="stylesheet" href="/css/custom/customization.css" media="defer" onload="this.media='all'">
     # fps显示
-    - <link rel="stylesheet" href="/css/custom/fps.css" media="defer" onload="this.media='all'">
-    # 自定义
-    - <link rel="stylesheet" href="/css/custom/custom.css" media="defer" onload="this.media='all'">
-    # - <link rel="stylesheet" href="/css/custom/butterflycustom.css" media="defer" onload="this.media='all'">
+    # - <link rel="stylesheet" href="/css/custom/fps.css">
   bottom:
-    # fps显示
-    # - <div id="fps"></div>
-    # - <script defer src="/js/custom/forPjax.js"></script>
     # 阿里矢量图标
     - <script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script>
+    # 右键修改
+    - <script src="/js/custom/rightmenu.js"></script>
+    - <script src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
+    # - <script defer data-pjax type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
     # MAC黑色代码框样式
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macblack.css">
     # MAC白色代码框样式
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macWhite.css">
-    # 随机跳转一篇文章
-    # - <script src="/custom/random.js"></script>
     # 评论弹窗
     - <script defer data-pjax src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
     - <script defer src="/js/custom/commentBarrage.js"></script>
-    # 侧栏评论区
-    - <script data-pjax defer src="/js/custom/fixed_comment.js"></script>
     # 和风天气
     # - <script async data-pjax src="/js/custom/nav.js"></script>
     - <script defer data-pjax src="https://widget.heweather.net/simple/static/js/he-simple.js?v=1.4.0"></script>
@@ -946,9 +940,7 @@ inject:
     # - <script src="https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script> # 添加此行
     - <script src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script>
     # 顶部加载进度条
-    - <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    # 浏览器异常提醒
-    - <script data-pjax src="/js/custom/abnormal.js"></script>
+    # - <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
     # 上升气泡效果
     # - <script defer src="https://cdn.jsdelivr.net/combine/npm/jquery@latest/dist/jquery.min.js,gh/weilining/jsdelivr/jquery/circlemagic/circlemagic.min.js,gh/weilining/jsdelivr@latest/jquery/circlemagic/butterflycirclemagic.js"></script>
     # 水波荡漾效果 开启 pjax
@@ -961,21 +953,14 @@ inject:
     # - <script defer src="/js/ripples.js"></script>
     # 樱花动效背景
     # - <script async src="/js/custom/sakura.js"></script>
+    # 落叶动效背景
+    # - <script src="https://cdn.nesxc.com/js/leaves.js"></script>
     # 雪花动态背景
     # - <script async src="/js/custom/snow.js"></script> # 六边下雪动效
     - <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
     - <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
     - <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
     - <script src="/js/custom/snowflake.js"></script> #下雪动效
-    # aplayer音乐
-    - <div class="aplayer no-destroy" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
-    # - <div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist" data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div>
-    # - <script data-pjax src="/js/custom/aplayer1.js"></script>
-    # - <div id="nav-music" onclick="rootlex.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="1708664797" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random"></meting-js></div>
-    # aplayer修改
-    # - <script src="/js/custom/Meeting.js"></script> #不中断设置
-    - <script async data-pjax src="/js/custom/aplayer.js"></script>
-    - <script async data-pjax src="/js/custom/anzhiyufunction.js"></script>
     # 夜间模式背景
     - <canvas id="universe"></canvas> # 创建画布
     - <script src="/js/custom/universe.js"></script> # 引入js
@@ -994,10 +979,24 @@ inject:
     - <script defer src="/live2d-widget/autoload.js"></script>
     # 切换背景
     - <script async src="/js/custom/handoff.js"></script>
-    # 右键修改
-    - <script src="/js/custom/rightmenu.js"></script>
-    - <script src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
-    # - <script defer data-pjax type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    # 浏览器异常提醒
+    - <script data-pjax src="/js/custom/abnormal.js"></script>
+    # 侧栏评论区
+    - <script data-pjax defer src="/js/custom/fixed_comment.js"></script>
+    # 随机跳转一篇文章
+    # - <script src="/custom/random.js"></script>
+    # fps显示
+    - <div id="fps"></div>
+    # - <script defer data-pjax src="/js/custom/forPjax.js"></script>
+    # aplayer音乐
+    # - <div class="aplayer no-destroy" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
+    # - <div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist" data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div>
+    # - <script data-pjax src="/js/custom/aplayer1.js"></script>
+    # - <div id="nav-music" onclick="rootlex.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="1708664797" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random"></meting-js></div>
+    # aplayer修改
+    # - <script src="/js/custom/meting.js"></script> #不中断设置
+    - <script async data-pjax src="/js/custom/anzhiyufunction.js"></script>
+    - <script async data-pjax src="/js/custom/aplayer.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -1100,7 +1099,7 @@ flink_style: flexcard # butterfly | volantis | flexcard
 # wowjs
 # see https://www.npmjs.com/package/hexo-butterfly-wowjs
 wowjs:
-  enable: false #控制动画开关。true是打开，false是关闭
+  enable: true #控制动画开关。true是打开，false是关闭
   priority: 10 #过滤器优先级
   mobile: false #移动端是否启用，默认移动端禁用
   animateitem:
@@ -1136,38 +1135,25 @@ wowjs:
 
 # hexo-butterfly-swiper
 # see https://akilar.top/posts/8e1264d1/
-# swiper:
-#   enable: true # 开关
-#   priority: 5 #过滤器优先权
-#   enable_page: all # 应用页面
-#   timemode: date #date/updated
-#   layout: # 挂载容器类型
-#     type: id
-#     name: recent-posts
-#     index: 0
-#   default_descr: 再怎么看我也不知道怎么描述它的啦！
-#   swiper_css: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css
-#   #https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
-#   swiper_js: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js
-#     #https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-#   custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-#   custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
-
-# hexo-butterfly-swiper-lyx
-# see https://yisous.xyz/posts/670e47f/#%E6%9B%B4%E5%A5%BD%E7%9A%84%E9%A6%96%E9%A1%B5%E8%BD%AE%E6%92%AD
 swiper:
   enable: true # 开关
-  priority: 5 # 过滤器优先权
+  priority: 5 #过滤器优先权
   enable_page: all # 应用页面
+  timemode: date #date/updated
   layout: # 挂载容器类型
-    type: class
+    type: id
     name: recent-posts
     index: 0
   default_descr:
-  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
-  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+  # swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
+  # swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
+  # custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
+  # custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+  swiper_css: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css
+  swiper_js: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js
   custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper-lyx/lib/swiperstyle.css
   custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper-lyx/lib/swiper_init.js
+
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/

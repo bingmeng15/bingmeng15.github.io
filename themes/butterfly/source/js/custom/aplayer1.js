@@ -10,5 +10,5 @@ var rootlex = {
             rootlex_musicPlaying = true;
             document.querySelector('meting-js').aplayer.play();
         }
-    },
+    }
 }

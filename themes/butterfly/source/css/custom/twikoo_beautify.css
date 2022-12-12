@@ -31,20 +31,10 @@
   left: -70px;
 }
 
-/* 评论块气泡化修改 */
-.tk-content {
-  background: #00a6ff;
-  /*默认模式访客气泡配色*/
-  padding: 10px;
-  color: #fff;
-  /*默认模式访客气泡字体配色*/
-  border-radius: 10px;
-  font-size: 16px !important;
-  width: fit-content;
-  max-width: 100%;
-  position: relative !important;
-  overflow: visible !important;
-  max-height: none !important;
+.tk-main>.tk-content{
+  background-color: #f1f1f1;
+  padding: 5px 20px;
+  border-radius: 12px;
 }
 
 /* 修复图片出框 */
