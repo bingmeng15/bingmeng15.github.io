@@ -5,7 +5,7 @@ date: 2022-11-21 14:07:32
 tags: NovelAI
 swiper_index: 1 #置顶轮播图顺序，非负整数，数字越大越靠前
 cover: "https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/blog-construct/banner.jpg"
-categories: NovelAI
+categories: 其它教程
 ---
 {% note blue 'fas fa-bullhorn' flat %}首先，我可以确定来看我的文章的,要么是对`NovelAI`感兴趣的或者是不知道怎么在本地部署`Novel`，或者部署遇到各种`bug`的，我这里踩了很多的`bug`，部署出现的问题如果遇到 差不多的情况，希望我的解决方法对你有所帮助。{% endnote %}
 

@@ -1,8 +1,8 @@
 ---
 title: 搭建个人博客（二）
-tags: 'hexo,butterfly'
+tags: 'hexo'
 cover: 'https://gcore.jsdelivr.net/npm/ushio-api-img-moe@5.0.4/img_48_1920x1080_1200_null_normal.jpg'
-categories: hexo
+categories: 魔改教程
 swiper_index: 2
 abbrlink: 38690
 date: 2022-07-09 13:50:20

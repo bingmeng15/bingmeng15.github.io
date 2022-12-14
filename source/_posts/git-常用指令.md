@@ -3,12 +3,9 @@ title: git 常用指令
 tags: Git
 abbrlink: 3d6e
 date: 2022-12-09 23:50:38
-categories: Git指令
+categories: 学习笔记
 cover: https://www.xzccc.com/api/acg/
 ---
-
-
-
 
 
 ## 仓库

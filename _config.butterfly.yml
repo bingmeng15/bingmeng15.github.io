@@ -24,7 +24,7 @@ highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 150 # unit: px
+highlight_height_limit: 200 # unit: px
 code_word_wrap: false
 
 # copy settings
@@ -768,7 +768,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 2
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
@@ -850,7 +850,7 @@ instantpage: false
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
 pangu:
-  enable: false
+  enable: true
   field: site # site/post
 
 # Lazyload (圖片懶加載)
@@ -894,6 +894,10 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    # 动画标签anima的依赖
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'">  
+    # 复制提醒和F12禁用与提醒
+    # - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css">
     # 导航栏
     # - <link rel="stylesheet" href="/css/custom/title.css" media="defer" onload="this.media='all'">
     - <link rel="stylesheet" href="https://widget.heweather.net/simple/static/css/he-simple.css?v=1.4.0">
@@ -917,9 +921,28 @@ inject:
     - <link rel="stylesheet" href="/css/custom/style.css?1" media="defer" onload="this.media='all'">
     # fps显示
     # - <link rel="stylesheet" href="/css/custom/fps.css">
+    # 即刻短文
+    - <link rel="stylesheet" href="/css/essay_page/essay_page.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/essay_page/home_essay_bar.css" media="defer" onload="this.media='all'">
   bottom:
+    # 特殊日子自动弹窗/灰屏
+    - <script type="text/javascript" src="https://unpkg.com/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
+    - <script src="/js/custom/lunar.js"></script>
+    - <script src="/js/custom/day.js"></script>
+    #数据集合标签issues的依赖
+    - <script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
     # 阿里矢量图标
     - <script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script>
+    # 自butterfly_v3.4.0+开始，主题基本实现去jquery化，需要自己添加引用，请读者根据版本自行决定是否添加这行引用。
+    # - <script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script>
+    # 复制提醒和F12禁用与提醒
+    # - <script src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script>
+    # - <script src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script>
+    # - <script async src="/js/custom/index.js"></script>
+    # 即刻短文
+    # - <script async data-pjax src="/js/custom.js"></script>
+    # 即刻依赖waterfall
+    - <script async data-pjax src="/js/waterfall/waterfall.js"></script>
     # 右键修改
     - <script src="/js/custom/rightmenu.js"></script>
     - <script src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
@@ -989,14 +1012,21 @@ inject:
     - <div id="fps"></div>
     # - <script defer data-pjax src="/js/custom/forPjax.js"></script>
     # aplayer音乐
+    - <script async data-pjax src="/js/custom/meting.js"></script>
     # - <div class="aplayer no-destroy" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
     # - <div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist" data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div>
+
     # - <script data-pjax src="/js/custom/aplayer1.js"></script>
-    # - <div id="nav-music" onclick="rootlex.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="1708664797" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random"></meting-js></div>
     # aplayer修改
-    # - <script src="/js/custom/meting.js"></script> #不中断设置
     - <script async data-pjax src="/js/custom/anzhiyufunction.js"></script>
+    # - <div id="nav-music" onclick="rootlex.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="1708664797" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random"></meting-js></div>
+    - <div id="nav-music-hoverTips"><<meting-js id="2693598459" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random"></meting-js></div>
     - <script async data-pjax src="/js/custom/aplayer.js"></script>
+
+
+  	# 返回顶部按钮
+    # - <div id="doraemon_to_top"><img alt="doraemon_to_top" onclick="fly_to_top()" src="<FilePath_图片>"></div>
+
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -1063,9 +1093,9 @@ CDN:
     # fontawesomeV6:
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
-    aplayer_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
-    aplayer_js: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
-    meting_js: https://alist.anzhiy.cn/d/anzhiyu/js/Meting2.min.js
+    # aplayer_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
+    # aplayer_js: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
+    # meting_js: https://alist.anzhiy.cn/d/anzhiyu/js/Meting2.min.js
     # prismjs_js:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:
@@ -1133,27 +1163,6 @@ wowjs:
   wow_js: https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js
   wow_init_js: https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js
 
-# hexo-butterfly-swiper
-# see https://akilar.top/posts/8e1264d1/
-swiper:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  timemode: date #date/updated
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  default_descr:
-  # swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
-  # swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-  # custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-  # custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
-  swiper_css: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css
-  swiper_js: https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper-lyx/lib/swiperstyle.css
-  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper-lyx/lib/swiper_init.js
-
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
@@ -1171,3 +1180,26 @@ tag_plugins:
     carousel: https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
     tag_plugins_css: https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
 
+
+categories:
+  enable: true
+  学习笔记:
+    desc: 记录我的学习笔记 #卡片描述
+    image: http://img.xjh.me/img/61823065_p0.jpg #卡片封面
+    color1: "#B7D31E" #卡片正面颜色以及背面渐变色1
+    color2: "#42CE1E" #卡片背面渐变色2
+  魔改教程:
+    desc: 随便做的美化，但是技术力捉急
+    image: /img/Page/categories/123.png
+    color1: "#06DE86"
+    color2: "#06A5DE"
+  小说:
+    desc: 顾名思义，关于我的全部
+    image: /img/Page/categories/147.png
+    color1: "#189BC4"
+    color2: "#183DC4"
+  其它教程:
+    desc: live<br>a<br>live
+    image: http://img.xjh.me/img/58239777_p0.jpg
+    color1: "#C018C4"
+    color2: "#C41818"

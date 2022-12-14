@@ -1,8 +1,8 @@
 ---
 title: 搭建个人博客（三）
-tags: 'hexo,butterfly'
+tags: 'hexo'
 cover: 'https://tva4.sinaimg.cn/large/0075auPSly1fqb9dyz4lwj31hc0tznds.jpg'
-categories: hexo
+categories: 魔改教程
 swiper_index: 3
 abbrlink: 39771
 date: 2022-07-09 14:01:53

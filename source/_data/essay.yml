@@ -1,0 +1,29 @@
+- class_name: 即刻短文
+  essay_list:
+    - content: 这里终于把短文搞定了
+      date: 2022/10/25
+      link: https://bm158.tk/album/
+    - content: 搜索🔍支持缩略图显示啦（默认获取文章内容的第一张图片）
+      date: 2022/10/23 08:00:00
+      from: 冰梦
+    - content: 高清图片随机
+      date: 2022/10/23 10:00:00
+      image:
+        - https://api.ixiaowai.cn/gqapi/gqapi.php
+    - content: ThreeJs API真多丫
+      date: 2022/10/19
+    - content: 二次元图片随机分享
+      date: 2022/10/03
+      image:
+        - https://api.ixiaowai.cn/api/api.php
+    - content: 这里分享几张图
+      date: 2022/10/02
+      image:
+        - https://tva3.sinaimg.cn/large/0060lm7Tly1frlcry94lyj31hc0u0x6p.jpg
+        - https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkc3khj2j31kw0w0x48.jpg
+        - https://tva1.sinaimg.cn/large/87c01ec7gy1frx48otjvoj21hc0u04jr.jpg
+    - content: 歌曲推荐
+      date: 2022/09/25
+      aplayer:
+        server: tencent
+        id: 001FGQba3i10mw

@@ -6,6 +6,8 @@ block content
       h1.page-title= page.title
 
     case page.type
+      when 'essay'
+        include includes/page/essay.pug
       when 'tags'
         include includes/page/tags.pug
       when 'link'

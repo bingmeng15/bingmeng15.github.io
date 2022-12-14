@@ -133,5 +133,5 @@ console.log(
   "background: #fadfa3; padding:5px 0;"
 ),
   window.customElements &&
-    !window.customElements.get("meting-js") &&
-    ((window.MetingJSElement = MetingJSElement), window.customElements.define("meting-js", MetingJSElement));
+  !window.customElements.get("meting-js") &&
+  ((window.MetingJSElement = MetingJSElement), window.customElements.define("meting-js", MetingJSElement));

@@ -1,7 +1,7 @@
 ---
 title: hexo+butterfly添加背景特效
 tags: butterfly
-categories: butterfly
+categories: 魔改教程
 cover: 'https://tva3.sinaimg.cn/large/0072Vf1pgy1foxk6qy63sj31kw0w0twh.jpg'
 abbrlink: b4da
 date: 2022-12-10 14:37:27

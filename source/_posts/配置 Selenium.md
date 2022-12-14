@@ -42,7 +42,7 @@ pip install selenium==3.141.0
 <!-- tab python -->
 这里准备`python`下载地址:
 
-{% link python官网,https://www.python.org/,https://ts1.cn.mm.bing.net/th/id/R-C.54ed15a35ba57fd3ddce493e053a4485?rik=OURyzhmXgjDwwg&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f00%2f23%2f85%2f4756cefdce8d33a.jpg&ehk=C8VMVgepnAYQJ9tiYDBJrBeMmhVTQBWVCR1MBqAiEvQ%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1 %}
+{% link python官网,https://www.python.org/, https://img02.anzhiy.cn/adminuploads/1/2022/09/25/63300647dea51.png %}
 <!-- endtab -->
 
 
