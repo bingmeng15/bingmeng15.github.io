@@ -9,27 +9,25 @@ cover: https://tva4.sinaimg.cn/large/87c01ec7gy1frmmihp11yj21hc0u0hdu.jpg
 
 ## jdk下载和安装
 
-> 注：因为`JMeter`运行需要依赖`jdk`环境，所以在安装`JMeter`之前需要配置安装`jdk`且配置好环境变量，需要`jdk1.8`以上的版本(这里推荐安装java8版本就够了)。
+> 注：因为`JMeter`运行需要依赖`jdk`环境，所以在安装`JMeter`之前需要配置安装`jdk`且配置好环境变量，需要`jdk8`以上的版本(这里推荐安装java8版本就够了)。
 
 #### `jdk`下载：
 
- ```
-https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html
-```
+{% link https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html,JMeter,https://ts1.cn.mm.bing.net/th/id/R-C.0c660c968839e2580086f25aea8e666d?rik=fknCk60rtD9lhw&riu=http%3a%2f%2ficon.chrafz.com%2fuploads%2fallimg%2f160919%2f1-1609191639570-L.png&ehk=KropbEGpApuUWJGSV5H%2fTAUmKgcA%2bJaK0J3OY91lA5Q%3d&risl=&pid=ImgRaw&r=0,下载地址 %}
 
-+ 这里就不截图了，找到自己的系统版本，下载就可以了。
+{% note default simple %}
+这里就不截图了，找到自己的系统版本，下载就可以了。
 
-+ 注：这里下载需要一个登录账号，你需要注册一个。
-
+{% span red, 注 %}：这里下载需要一个登录账号，你需要注册一个。
+{% endnote %}
 
 #### `jdk`安装
 
-    点击安装包，并点击下一步。
+点击安装包，并点击下一步。
 
 ![](https://pic.imgdb.cn/item/6396dc03b1fccdcd3626fdf1.png)
 
-    后面还有`jre`安装，路径记得更改。
-
+{% note default simple %}后面还有`jre`安装，路径记得更改。{% endnote %}
 ## 配置环境变量
 
 1. 环境配置
@@ -42,7 +40,6 @@ https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downlo
     变量值：jdk的安装路径
     ```
     ![](https://pic.imgdb.cn/item/6396ddd9b1fccdcd362954ff.png)
-
 
    + 这里再添加一个`ClassPath`变量，方法和`java-home`一样，在系统变量下创建一个`ClassPath`变量，引入变量值。
 
@@ -61,7 +58,7 @@ https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downlo
 
     ![](https://pic.imgdb.cn/item/6396e1d0b1fccdcd36305110.png)
 
-   + 到这里基本上已经完成。
+    + 到这里基本上已经完成。
 
 2. java运行环境的验证
 
@@ -83,8 +80,8 @@ https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downlo
 
 1. 下载`JMeter`
 
-    https://jmeter.apache.org/download_jmeter.cgi
-
+    {% link https://blog.leonus.cn/,JMeter,https://ts1.cn.mm.bing.net/th/id/R-C.0c660c968839e2580086f25aea8e666d?rik=fknCk60rtD9lhw&riu=http%3a%2f%2ficon.chrafz.com%2fuploads%2fallimg%2f160919%2f1-1609191639570-L.png&ehk=KropbEGpApuUWJGSV5H%2fTAUmKgcA%2bJaK0J3OY91lA5Q%3d&risl=&pid=ImgRaw&r=0,下载地址 %}
+    
     下载`zip`压缩包
 
     ![](https://pic.imgdb.cn/item/6396e5e7b1fccdcd3637effa.png)
@@ -104,7 +101,7 @@ https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downlo
 
     ```
     变量名：CLASSPATH
-    变量值：%JMETER_HOME%\lib\ext\ApacheJMeter_core.jar;    %JMETER_HOME%\lib\jorphan.jar;%JMETER_HOME%\lib/logkit-2.0.jar;
+    变量值：%JMETER_HOME%\lib\ext\ApacheJMeter_core.jar;%JMETER_HOME%\lib\jorphan.jar;%JMETER_HOME%\lib/logkit-2.0.jar;
     ```
 
     直接在后面添加就行，全部点击确定保存（如图）。

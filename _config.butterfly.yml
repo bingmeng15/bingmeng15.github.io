@@ -629,7 +629,7 @@ blog_title_font:
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
-  enable: true
+  enable: false
   icon: # the unicode value of Font Awesome icon, such as '\3423'
   icon-top:
 
@@ -1171,7 +1171,7 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: /img/siteicon/android-chrome-72x72.png #link_card标签默认的图标图片
+    placeholder: /source/img/siteicon/android-chrome-72x72.png #link_card标签默认的图标图片
   CDN:
     anima: https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
     jquery: https://cdn.cbd.int/jquery@latest/dist/jquery.min.js #issues标签依赖
@@ -1182,24 +1182,25 @@ tag_plugins:
 
 
 categories:
-  enable: true
+  priority: 5
   学习笔记:
     desc: 记录我的学习笔记 #卡片描述
-    image: http://img.xjh.me/img/61823065_p0.jpg #卡片封面
+    img: http://img.xjh.me/img/61823065_p0.jpg
     color1: "#B7D31E" #卡片正面颜色以及背面渐变色1
     color2: "#42CE1E" #卡片背面渐变色2
   魔改教程:
     desc: 随便做的美化，但是技术力捉急
-    image: /img/Page/categories/123.png
+    img: /source/img/Page/categories/123.png
     color1: "#06DE86"
     color2: "#06A5DE"
-  小说:
-    desc: 顾名思义，关于我的全部
-    image: /img/Page/categories/147.png
+  小说分享:
+    desc: 顾名思义，关于我看的小说
+    img: /source/img/Page/categories/147.png
     color1: "#189BC4"
     color2: "#183DC4"
   其它教程:
-    desc: live<br>a<br>live
-    image: http://img.xjh.me/img/58239777_p0.jpg
+    desc: 关于一些无聊的教程
+    img: http://img.xjh.me/img/58239777_p0.jpg #https://tva2.sinaimg.cn/large/87c01ec7gy1frx4dp97n6j21hc0u0489.jpg 
     color1: "#C018C4"
     color2: "#C41818"
+

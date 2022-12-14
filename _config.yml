@@ -306,7 +306,7 @@ magnet:
     - name: 小说分享
       display_name: 冰梦の小说分享
       icon: 📒
-    - name: NovelAI
+    - name: 其它教程
       display_name: 冰梦の其它教程
       icon: 🌊
   color_setting:
