@@ -21,28 +21,30 @@ pip install selenium==3.141.0
 {% note green no-icon %}你可以安装最新版，不过与旧版本区别很大，不过现在很多情况下`3.141.0`这个版本用的最多（个人认为）。{% endnote %}
 
 模块搜索官网：https://pypi.org
+
 <!-- endtab -->
 
 <!-- tab 浏览器驱动 -->
 
-{% note red 'fas fa-fan' modern%}我们先不着急下载，先看好自己浏览器的版本再下载浏览器驱动！！！{% endnote %}
+   {% note red 'fas fa-fan' modern%}我们先不着急下载，先看好自己浏览器的版本再下载浏览器驱动！！！{% endnote %}
+   安装必要的浏览器驱动：
 
-安装必要的浏览器驱动：
+Google chrome
 
-1. Google chrome
-
-{% link chromedriver驱动,https://registry.npmmirror.com/binary.html?path=chromedriver, https://ts1.cn.mm.bing.net/th/id/R-C.ab97f6bcbc5d6fbceee27df50463ad06?rik=PDjQ3YxqLbhtPA&riu=http%3a%2f%2fgood1230.com%2f100sucai_images%2fimages%2f3678.jpg&ehk=A1CUjjT2KowDhRVxkYkT8nszeCsOGgt55PCHOAXKbx4%3d&risl=&pid=ImgRaw&r=0 %}
-
-2. Firfox 浏览器
-
-{% link chromedriver驱动,https://registry.npmmirror.com/binary.html?path=geckodriver, https://tse1-mm.cn.bing.net/th/id/OIP-C.IS9p4m5Nfz7jedxqDixrKQHaHp?pid=ImgDet&rs=1 %}
-
+<div>
+   {% link  https://registry.npmmirror.com/binary.html?path=chromedriver , chromedriver驱动, https://ts1.cn.mm.bing.net/th/id/R-C.ab97f6bcbc5d6fbceee27df50463ad06?rik=PDjQ3YxqLbhtPA&riu=http%3a%2f%2fgood1230.com%2f100sucai_images%2fimages%2f3678.jpg&ehk=A1CUjjT2KowDhRVxkYkT8nszeCsOGgt55PCHOAXKbx4%3d&risl=&pid=ImgRaw&r= , chromedriver下载地址%}
+</div>
+ Firfox 浏览器
+<div>
+   {% link  https://registry.npmmirror.com/binary.html?path=geckodriver , geckodriver驱动, https://tse1-mm.cn.bing.net/th/id/OIP-C.IS9p4m5Nfz7jedxqDixrKQHaHp?pid=ImgDet&rs=1= , geckodriver下载地址%}
+</div>
 <!-- endtab -->
 
 <!-- tab python -->
-这里准备`python`下载地址:
-
-{% link python官网,https://www.python.org/, https://img02.anzhiy.cn/adminuploads/1/2022/09/25/63300647dea51.png %}
+   这里准备`python`下载地址:
+<div>
+   {% link  https://www.python.org/ , python, https://img02.anzhiy.cn/adminuploads/1/2022/09/25/63300647dea51.png  , python官网 %}
+</div>
 <!-- endtab -->
 
 

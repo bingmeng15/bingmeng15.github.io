@@ -10,7 +10,7 @@ cover: https://www.xzccc.com/api/acg/
 
 ## 仓库
 
-```
+```bash
 # 在当前目录新建一个Git代码库
 git init
 
@@ -23,7 +23,7 @@ git clone [url]
 
 ## 配置
 
-```
+```bash
 # 显示当前的Git配置
 git config --list
 
@@ -37,7 +37,7 @@ git config [--global] user.email "[email address]"
 
 ## 增加/删除文件
 
-```
+```bash
 # 添加指定文件到暂存区
 git add [file1] [file2] ...
 
@@ -63,7 +63,7 @@ git mv [file-original] [file-renamed]
 
 ## 代码提交
 
-```
+```bash
 # 提交暂存区到仓库区
 git commit -m [message]
 
@@ -86,7 +86,7 @@ git commit --amend [file1] [file2] ...
 
 ## 分支
 
-```
+```bash
 # 列出所有本地分支
 git branch
 
@@ -133,7 +133,7 @@ git branch -dr [remote/branch]
 
 ## 标签
 
-```
+```bash
 # 列出所有tag
 git tag
 
@@ -164,7 +164,7 @@ git checkout -b [branch] [tag]
 
 ## 查看信息
 
-```
+```bash
 # 显示有变更的文件
 git status
 
@@ -229,7 +229,7 @@ git reflog
 
 ## 远程同步
 
-```
+```bash
 # 下载远程仓库的所有变动
 git fetch [remote]
 
@@ -257,7 +257,7 @@ git push [remote] --all
 
 ## 撤销
 
-```
+```bash
 # 恢复暂存区的指定文件到工作区
 git checkout [file]
 
@@ -293,7 +293,7 @@ git stash pop
 
 ## Hexo
 
-```
+```bash
 # 清除缓存
 hexo clean
 # 生成静态文件

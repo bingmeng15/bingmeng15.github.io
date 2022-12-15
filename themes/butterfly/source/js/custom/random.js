@@ -1,15 +1,13 @@
-hexo.extend.generator.register("random", function (locals) {
-    const config = hexo.config.random || {};
-    const posts = [];
-    for (const post of locals.posts.data) {
-      if (post.random !== false) posts.push(post.path);
-    }
-    return {
-      path: config.path || "zhheo/random.js",
-      data: `var posts=${JSON.stringify(
-        posts
-      // )};function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};`,
-      // 如果你没有开启pjax用下面的代码
-      )};function toRandomPost(){window.open('/'+posts[Math.floor(Math.random() * posts.length)],"_self");};`,
-    };
-  });
+function randomPost() {
+  fetch('/sitemap.xml').then(res => res.text()).then(str => (new window.DOMParser()).parseFromString(str, "text/xml")).then(data => {
+      let ls = data.querySelectorAll('url loc');
+      let locationHref,locSplit;
+      do {
+          locationHref = ls[Math.floor(Math.random() * ls.length)].innerHTML
+          locSplit = locationHref.split('/')[3] || ''
+      } while (locSplit == '' || locSplit == 'tags');
+      //若所有文章都如 https://…….com/posts/2022/07/…… 格式，主域名后字符是 posts，则循环条件改为：
+      //while (locSplit !== 'posts');
+      location.href = locationHref
+  })
+}

@@ -206,14 +206,16 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: false
+  enable: true
+  coinAudio: https://cdn.cbd.int/akilar-candyassets@1.0.36/audio/aowu.m4a
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+    - img: /img/wechat.png
+      link:
+      text: wechat
+    - img: /img/alipay.png
+      link:
+      text: alipay
+
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -1007,7 +1009,7 @@ inject:
     # 侧栏评论区
     - <script data-pjax defer src="/js/custom/fixed_comment.js"></script>
     # 随机跳转一篇文章
-    # - <script src="/custom/random.js"></script>
+    - <script src="/js/custom/random.js"></script>
     # fps显示
     - <div id="fps"></div>
     # - <script defer data-pjax src="/js/custom/forPjax.js"></script>
@@ -1015,7 +1017,6 @@ inject:
     - <script async data-pjax src="/js/custom/meting.js"></script>
     # - <div class="aplayer no-destroy" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
     # - <div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist" data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div>
-
     # - <script data-pjax src="/js/custom/aplayer1.js"></script>
     # aplayer修改
     - <script async data-pjax src="/js/custom/anzhiyufunction.js"></script>
@@ -1023,6 +1024,8 @@ inject:
     - <div id="nav-music-hoverTips"><<meting-js id="2693598459" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random"></meting-js></div>
     - <script async data-pjax src="/js/custom/aplayer.js"></script>
 
+    # 昼夜切换动画
+    - <script src="/js/sun_moon.js" async></script>
 
   	# 返回顶部按钮
     # - <div id="doraemon_to_top"><img alt="doraemon_to_top" onclick="fly_to_top()" src="<FilePath_图片>"></div>
@@ -1101,6 +1104,9 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
+    # 打赏按钮投币效果
+    coin_js: /js/coin/coin.js
+    coin_css: /css/coin/coin.css
 
 # fcircle
 # see https://anzhiy.cn/posts/3753.html

@@ -14,7 +14,7 @@ email: bm158@qq.com
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://bingmeng15.github.io/
+url: https://bm158.tk/
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -321,3 +321,26 @@ magnet:
   temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
   plus_style: ""
 
+
+# https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: true
+  categories: true
+
+
+# https://github.com/hexojs/hexo-generator-feed
+# Feed Atom
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
+rss: /atom.xml
+
+
+# Extensions
+plugins:
+    - hexo-generator-feed
+    - hexo-generator-baidu-sitemap
+    - hexo-generator-sitemap

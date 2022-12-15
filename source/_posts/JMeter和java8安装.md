@@ -34,7 +34,7 @@ cover: https://tva4.sinaimg.cn/large/87c01ec7gy1frmmihp11yj21hc0u0hdu.jpg
 
     打开高级系统设置（用系统的搜索就可以找到），打开`环境变量`，在系统变量下创建一个`JAVA_HOME`变量名，并且找到你的jdk安装路径。
 
-    ```
+    ```markdown
     变量名：JAVA_HOME
 
     变量值：jdk的安装路径
@@ -43,7 +43,7 @@ cover: https://tva4.sinaimg.cn/large/87c01ec7gy1frmmihp11yj21hc0u0hdu.jpg
 
    + 这里再添加一个`ClassPath`变量，方法和`java-home`一样，在系统变量下创建一个`ClassPath`变量，引入变量值。
 
-    ```
+    ```markdown
     变量名：ClassPath
     变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
     ```
@@ -51,7 +51,7 @@ cover: https://tva4.sinaimg.cn/large/87c01ec7gy1frmmihp11yj21hc0u0hdu.jpg
 
    + 找到`Path`,进入界面新建两个`java`环境变量。
 
-    ```
+    ```markdown
     %JAVA_HOME%\bin
     %JAVA_HOME%\jre\bin
     ```
@@ -92,14 +92,14 @@ cover: https://tva4.sinaimg.cn/large/87c01ec7gy1frmmihp11yj21hc0u0hdu.jpg
 
     这里和上面一样，打开`高级系统设置`,在`系统变量`下新建变量和变量值。
 
-    ```
+    ```markdown
     新建变量名：JMETER_HOME
     变量值：jmeter解压地址
     ```
 
 3. ClassPath变量
 
-    ```
+    ```markdown
     变量名：CLASSPATH
     变量值：%JMETER_HOME%\lib\ext\ApacheJMeter_core.jar;%JMETER_HOME%\lib\jorphan.jar;%JMETER_HOME%\lib/logkit-2.0.jar;
     ```
@@ -112,7 +112,7 @@ cover: https://tva4.sinaimg.cn/large/87c01ec7gy1frmmihp11yj21hc0u0hdu.jpg
 
     找到Path，添加此环境变量
     
-    ```
+    ```markdown
     环境变量：%JMETER_HOME%\bin
     ```
 

@@ -9,7 +9,7 @@ cover: https://tva3.sinaimg.cn/large/87c01ec7gy1fs5dmi0fs1j21hc0u0npd.jpg
 
 ## 转自
 
-{% link Xlenco,https://xlenco.eu.org, https://xlenco.onmicrosoft.cn/img/head.webp %}
+{% link  https://xlenco.eu.org, Xlenco, https://xlenco.onmicrosoft.cn/img/head.webp , %}
 
 ## Dome
 
@@ -73,7 +73,7 @@ cover: https://tva3.sinaimg.cn/large/87c01ec7gy1fs5dmi0fs1j21hc0u0npd.jpg
 
 ## 引入 JS
 
-```
+```javascript
 <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 ```
 
