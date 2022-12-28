@@ -1,0 +1,1 @@
+function switchCommentBarrage(){let e=window.localStorage.getItem("commentBarrageDisplay");document.getElementById("comment-barrage").style.display="false"===e?"block":"none",window.localStorage.setItem("commentBarrageDisplay","false"===e?"undefined":"false",864e5)}

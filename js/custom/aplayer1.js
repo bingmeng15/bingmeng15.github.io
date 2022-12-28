@@ -1,0 +1,1 @@
+var rootlex={musicToggle:function(){rootlex_musicPlaying?(document.querySelector("#nav-music").classList.remove("playing"),rootlex_musicPlaying=!1,document.querySelector("meting-js").aplayer.pause()):(document.querySelector("#nav-music").classList.add("playing"),rootlex_musicPlaying=!0,document.querySelector("meting-js").aplayer.play())}};
